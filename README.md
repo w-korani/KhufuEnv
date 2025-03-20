@@ -6,11 +6,11 @@
 
 ## Installation
 
-git clon https://github.com/w-korani/KhufuEnv
-cd KhufuEnv_main
-sudo ./installer
-echo "source /etc/KhufuEnv/call.sh"  >>  ~/.bashrc
-. ~/.bashrc
+- git clone https://github.com/w-korani/KhufuEnv
+- cd KhufuEnv_main
+- sudo ./installer
+- echo "source /etc/KhufuEnv/call.sh"  >>  ~/.bashrc
+- . ~/.bashrc
 
 ## Uninstallation
 
@@ -18,4 +18,7 @@ echo "source /etc/KhufuEnv/call.sh"  >>  ~/.bashrc
 ## Getting Help
 KhufuEnvHelp
 KhufuEnvHelp tool_name
+
+## Citation
+
 
