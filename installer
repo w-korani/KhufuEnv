@@ -1,0 +1,19 @@
+#!/bin/sh
+# saved as './payload/installer'
+
+CDIR="$(pwd)"
+
+echo "copying over files"
+mkdir -p /etc/asdap/
+cp -RP --remove-destination $CDIR/asdap/* /etc/asdap/
+
+# perms
+chmod 777 /etc/asdap/*.sh
+
+# wait and check it
+sleep 10
+if [ -n "$(ip addr | grep tun)" ] ; then
+  echo "Successfully installed"
+else
+  echo "Failed to bring device up"
+fi
