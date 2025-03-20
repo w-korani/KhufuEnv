@@ -1,8 +1,8 @@
 # KhufuEnv
 
-single-thread process
-does not need big compuataional resources
-does a simple job
+single-thread process.
+does not need big compuataional resources.
+does a simple job.
 
 ## Installation
 git clon https://github.com/w-korani/KhufuEnv
