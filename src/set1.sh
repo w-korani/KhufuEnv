@@ -1,0 +1,3 @@
+wal(){
+echo "wal"
+}
