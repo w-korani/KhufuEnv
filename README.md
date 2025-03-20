@@ -6,8 +6,11 @@
 
 ## Installation
 
-- git clone https://github.com/w-korani/KhufuEnv
-- cd KhufuEnv_main
+1. download the package
+  
+     git clone https://github.com/w-korani/KhufuEnv
+
+2. go cd KhufuEnv_main
 - sudo ./installer
 - echo "source /etc/KhufuEnv/call.sh"  >>  ~/.bashrc
 - . ~/.bashrc
