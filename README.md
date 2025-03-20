@@ -18,8 +18,14 @@
 ```
    sudo ./installer
 ```
-- echo "source /etc/KhufuEnv/call.sh"  >>  ~/.bashrc
-- . ~/.bashrc
+4. add the source for the Bash Shell Environment
+```
+   echo "source /etc/KhufuEnv/call.sh"  >>  ~/.bashrc
+```
+5. refresh the Bash Shell Environment
+```
+   . ~/.bashrc
+```
 
 ## Uninstallation
 
