@@ -4,6 +4,10 @@
 - does not need big compuataional resources.
 - does a simple job.
 
+## Requirments
+R
+bedtools
+
 ## Installation
 
 1. download the package
