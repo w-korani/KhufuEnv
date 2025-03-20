@@ -16,7 +16,7 @@
    ```
 3. run the installer
 ```
-   sudo ./installer
+   sudo ./installer.sh
 ```
 4. add the source for the Bash Shell Environment
 ```
@@ -28,11 +28,33 @@
 ```
 
 ## Uninstallation
+1. go to the package folder
+   ```
+   cd KhufuEnv_main
+   ```
+2. run the uninstaller
+```
+   sudo ./uninstaller.sh
+```
+3. remove the source for the Bash Shell Environment
+```
+   sed -i "/^source \/etc\/KhufuEnv\/call.sh$/d"  ~/.bashrc
+```
+4. refresh the Bash Shell Environment
+```
+   . ~/.bashrc
+```
 
 
 ## Getting Help
-KhufuEnvHelp
-KhufuEnvHelp tool_name
+- to list all tools
+```
+   KhufuEnvHelp
+```
+- to show the documentation of a specific tool
+```
+   KhufuEnvHelp tool_name
+```
 
 ## Citation
 
