@@ -37,7 +37,7 @@ width=$2
 move=$3
 if [[ -z $width ]] ; then width=120; fi
 if [[ -z $move ]]; then move=1; fi
-cat $1 | fasta2fa | awk -v width=$width -v move=$move  '{if(NR%2==1){id=$0} ;if(NR%2==0) {X=1;for(x=1;x<=length($0);x+=move) {S=substr($0,x,width); if(length(S) == width) {printf "%s_%020d\n%s\n" , id, X, S ; X+=1}  } } }'
+cat $1 | fastaUnWrap | awk -v width=$width -v move=$move  '{if(NR%2==1){id=$0} ;if(NR%2==0) {X=1;for(x=1;x<=length($0);x+=move) {S=substr($0,x,width); if(length(S) == width) {printf "%s_%020d\n%s\n" , id, X, S ; X+=1}  } } }'
 }
 ############################
 fastaCombine(){
