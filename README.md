@@ -10,8 +10,14 @@
 ```
    git clone https://github.com/w-korani/KhufuEnv
 ```
-1. go cd KhufuEnv_main
-- sudo ./installer
+2. go to the package folder
+   ```
+   cd KhufuEnv_main
+   ```
+3. run the installer
+```
+   sudo ./installer
+```
 - echo "source /etc/KhufuEnv/call.sh"  >>  ~/.bashrc
 - . ~/.bashrc
 
