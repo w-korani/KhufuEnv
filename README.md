@@ -48,7 +48,7 @@ R package
    ```
    . ~/.bashrc  
    ```
-or
+   or
    ```
    exec bash
    ```
