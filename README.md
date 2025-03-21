@@ -30,6 +30,7 @@ R package
    . ~/.bashrc
    ```
 
+
 ## Uninstallation
 1. go to the package folder
    ```
