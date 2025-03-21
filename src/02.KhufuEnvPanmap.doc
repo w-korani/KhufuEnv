@@ -1,0 +1,536 @@
+####################################
+############## panmap ##############
+####################################
+
+########################################################################
+########################################################################
+
+###BEGIN_panmapConcatenate###
+Usage: panmapConcatenate panmap1 panmap2
+
+Description:
+	The panmapConcatenate function combines row data for two input panmaps. Row data is combined only for shared sample IDs. All other columns will be dropped.
+
+Arguments:
+	panmap1	ex: test1.panmap	Panmap to be processed.
+	panmap2	ex: test3.panmap	Panmap to be processed. 
+
+Example:
+	panmapConcatenate test1.panmap test3.panmap	Saves output to test1.test3.concatenated.panmap & test1.test3.concatenated.panmap.fa
+##END_panmapConcatenate##
+
+
+###BEGIN_panmapMerge###
+Usage: panmapMerge panmap1 panmap2
+
+Description:
+	The panmapMerge function joins two input panmaps in the order they are passed to the function. This function is ideal for merging a panmap back together after splitting samples. Note: Because this function performs a left outer join, all row data existing in the right panmap that does not exist in the left panmap will be dropped. 
+
+Arguments:
+	panmap1	ex: test1.panmap	Panmap to be processed.
+	panmap2	ex: test2.panmap	Panmap to be processed.
+
+Example:
+	panmapMerge test1.panmap test2.panmap	Saves output to test1.test2.merged.panmap & test1.test2.merged.panmap.fa
+##END_panmapMerge##
+
+
+###BEGIN_panmapExtract###
+Usage: panmapExtract panmap bed
+
+Description:
+	The panmapExtract function will extract and display the input panmap data matching the data in the bed file.
+
+Arguments:
+	panmap	ex: test1.hapmap.panmap	Panmap to be processed.
+	bed	ex: test1.bed	Data to be extracted.
+
+Example:
+	panmapExtract test1.panmap test1.bed	Saves output to test1.extracted.test1.bed.panmap & test1.extracted.test1.bed.panmap.fa
+##END_panmapExtract##
+
+
+###BEGIN_panmapSubtract###
+Usage: panmapSubtract panmap bed
+
+Description:
+	The panmapSubtract function will subtract data from the input panmap matching data in the bed file, and display the remaining data.
+
+Arguments:
+	panmap	ex: test1.panmap	Panmap to be processed.
+	bed	ex: test1.bed	Data to be subtracted.
+
+Example:
+	panmapSubtract test1.panmap test1.bed	Saves output to test1.subtracted.test1.bed.panmap & test1.subtracted.test1.bed.panmap.fa
+##END_panmapSubtract##
+
+
+########################################################################
+########################################################################
+
+
+###BEGIN_panmapGetFasta###
+Usage: panmapGetFasta panmap1 panmap2
+
+Description:
+	The panmapGetFasta function creates a fasta file for the first input panmap using the second input panmaps paired fasta file. This function targets a use case where the user may have manually filtered a panmap and needs an updated paired fasta file.
+
+Arguments:
+	panmap1	ex: test1_manualSubset.panmap	Panmap to be processed. Subset of panmap2.
+	panmap2	ex: test1.panmap	Panmap that was used to generate panmap1. Directory must also include the associated panmap.fa.
+
+Example:
+	panmapGetFasta test1_manualSubset.panmap test1.panmap	Saves output to test1_manualSubset.panmap.fa in the directory the input panmap1 is located in.
+##END_panmapGetFasta##
+
+
+###BEGIN_panmapGetSNP###
+Usage: panmapGetSNP panmap
+
+Description:
+	The panmapGetSNP function filters out structural variants from the input panmap, producing a panmap and fasta file with only SNPs remaining.
+
+Arguments:
+	panmap	ex: test1.panmap	Panmap to be processed.
+
+Example:
+	panmapGetSNP test1.panmap	Saves output to test1.SNP.panmap & test1.SNP.panmap.fa
+##END_panmapGetSNP##
+
+
+###BEGIN_panmapGetSV###
+Usage: panmapGetSV panmap
+
+Description:
+	The panmapGetSV function filters out SNPs from the input panmap, producing a panmap and fasta file with only structural variants remaining.
+
+Arguments:
+	panmap	ex: test1.panmap	Panmap to be processed.
+
+Example:
+	panmapGetSV test1.panmap	Saves output to test1.SV.panmap & test1.SV.panmap.fa
+##END_panmapGetSV##
+
+
+###BEGIN_panmapGetDiAlleles###
+Usage: panmapGetDiAlleles panmap
+
+Description:
+	The panmapGetDiAlleles function filters the input panmap, producing a panmap and fasta file with only diallelic SNPs.
+
+Arguments:
+	panmap	ex: test1.panmap	Panmap to be processed.
+
+Example:
+	panmapGetDiAlleles test1.panmap	Saves output to test1.DiAllelic.panmap & test1.DiAllelic.panmap.fa
+##END_panmapGetDiAlleles##
+
+
+########################################################################
+########################################################################
+
+
+###BEGIN_panmap2txt###
+Usage: panmap2txt panmap
+
+Description:
+	The panmap2txt function combines the chromosome and position data from the input panmap into a single column, i.e., chr_pos, and then displays the column data for all the samples. 
+
+Arguments:
+	panmap	ex: test1.panmap	Panmap to be processed.
+
+Example:
+	panmap2txt test1.panmap
+##END_panmap2txt##
+
+
+###BEGIN_panmap2hapmap###
+Usage: panmap2hapmap panmap
+
+Description:
+	The panmap2hapmap function converts an input panmap to a hapmap.
+
+Arguments:
+	panmap	ex: test1.panmap	Panmap to be processed. Directory must also include the associated panmap.fa.
+
+Example:
+	panmap2hapmap test1.panmap
+##END_panmap2hapmap##
+
+
+###BEGIN_hapmap2panmap###
+Usage: hapmap2panmap hapmap parents
+
+Description:
+	The hapmap2panmap function converts an input hapmap to a panmap and panmap.fa using the parents as specified in a comma-delimited list.
+
+Arguments:
+	hapmap	ex: test1.panmap.hapmap	Hapmap to be processed.
+	parents	ex: "CC477,TifNV"	Parents in comma-delimited list.
+
+Example:
+	hapmap2panmap test1.panmap.hapmap "CC477,TifNV"	Saves output to test1.panmap.hapmap.panmap & test1.panmap.hapmap.panmap.fa
+##END_hapmap2panmap##
+
+
+###BEGIN_panmap2vcf###
+Usage: panmap2vcf panmap
+
+Description:
+	The panmap2vcf function transforms an input panmap to a vcf file.
+
+Arguments:
+	panmap	ex: test1.panmap	Panmap to be processed.
+
+Example:
+	panmap2vcf test1.panmap
+##END_panmap2vcf##
+
+
+###BEGIN_vcf2panmap###
+Usage: vcf2panmap panmap parents
+
+Description:
+	The vcf2panmap function transforms an input vcf file to a panmap.
+
+Arguments:
+	panmap	ex: test1.vcf	Panmap to be processed.
+	parents	ex: "CC477,TifNV"	Parents separated by commas.
+
+Example:
+	vcf2panmap test1.vcf "CC477,TifNV"	Saves output to test1.vcf.panmap & test1.vcf.panmap.fa
+##END_vcf2panmap##
+
+
+###BEGIN_panmap2heatmap###
+Usage: panmap2heatmap panmap
+
+Description:
+	The panmap2heatmap function transforms an input panmap into a heatmap.
+
+Arguments:
+	panmap	ex: test1.panmap	Panmap to be processed.
+
+Example:
+	panmap2heatmap test1.panmap
+##END_panmap2heatmap##
+
+
+###BEGIN_heatmap2panmap###
+Usage: heatmap2panmap heatmap
+
+Description:
+	The heatmap2panmap function transforms an input heatmap to a panmap file.
+
+Arguments:
+	heatmap	ex: test1.heatmap	Panmap to be processed.
+
+Example:
+	heatmap2panmap test1.heatmap
+##END_heatmap2panmap##
+
+
+########################################################################
+########################################################################
+
+###BEGIN_panmapSplit###
+Usage: panmapSplit panmap
+
+Description:
+	The panmapSplit function splits the input panmap data by chromosome, saving each chromosomes data into a separate output file. The output files are stored in subdirectory, panmapCHRs, within the current working directory.
+
+Arguments:
+	panmap	ex: test1.panmap	Panmap to be processed.
+
+Example:
+	panmapSplit test1.panmap	Saves .panmap and .fa output to subdirectory, panmapCHRs.
+##END_panmapSplit##
+
+
+###BEGIN_panmapSampleIDsfromList###
+Usage: panmapSampleIDsfromList panmap list
+
+Description:
+	The panmapSampleIDsfromList function extracts and displays the data from the input panmap for only the sample IDs in the list file.
+
+Arguments:
+	panmap	ex: test1.panmap	Panmap to be processed.
+	list	ex: test1.list	List of sample IDs data to be extracted.
+
+Example:
+	panmapSampleIDsfromList test1.panmap test1.list	Saves output to test1.reordered.fromtest1.panmap & test1.reordered.fromtest1.panmap.fa.
+##END_panmapSampleIDsfromList##
+
+
+###BEGIN_panmapReAssignSampleIDsfromList###
+Usage: panmapReAssignSampleIDsfromList panmap list
+
+Description:
+	The panmapReAssignSampleIDsfromList function reassigns the sample IDs of the input panmap using the corresponding input list of new sample IDs.
+
+Arguments:
+	panmap	ex: test1.panmap	Panmap to be processed.
+	list	ex: test1reassign.list	List of new sample IDs to replace the original sample IDs. Must be in two column, tab-delimited format with ALL original sample IDs first, followed by the new corresponding sample IDs. 
+
+Example:
+	panmapReAssignSampleIDsfromList test1.panmap test1reassign.list	Saves output to test1.reassigned.fromtest1reassign.panmap & test1.reassigned.fromtest1reassign.panmap.fa.
+##END_panmapReAssignSampleIDsfromList##
+
+
+########################################################################
+########################################################################
+
+
+###BEGIN_panmapCalculateMissingVariant###
+Usage: panmapCalculateMissingVariant panmap
+
+Description:
+	The panmapCalculateMissingVariant uses the input panmap to calculate the percentage of missing variants at each position and displays the result in decimal format.
+
+Arguments:
+	panmap	ex: test1.panmap	Panmap to be processed.
+
+Example:
+	panmapCalculateMissingVariant test1.panmap
+##END_panmapCalculateMissingVariant##
+
+
+###BEGIN_panmap2vcf###
+Usage: panmapCalculateMissingSample panmap
+
+Description:
+	The panmapCalculateMissingSample function uses the input panmap to calculate the percentage of missing variants for each sample and displays the result in decimal format.
+
+Arguments:
+	panmap	ex: test1.panmap	Panmap to be processed.
+
+Example:
+	panmapCalculateMissingSample test1.panmap
+##END_panmapCalculateMissingSample##
+
+
+###BEGIN_panmapCalculateMAF###
+Usage: panmapCalculateMAF panmap
+
+Description:
+	The panmapCalculateMAF function calculates the minor allele frequency for each position in the input panmap and displays a table with the corresponding allele and frequency.
+
+Arguments:
+	panmap	ex: test1.panmap	Panmap to be processed.
+
+Example:
+	panmapCalculateMAF test1.panmap
+##END_panmapCalculateMAF##
+
+
+###BEGIN_panmapFilterMissingVariant###
+Usage: panmapFilterMissingVariant panmap missing
+
+Description:
+	The panmapFilterMissingVariant function filters the input panmap to remove sites with a percentage of variants missing beyond a specified threshold. 
+
+Arguments:
+	panmap	ex: test1.panmap	Panmap to be processed.
+	missing	ex: 0.75	Missing percentage to be used. Must be in decimal format.
+
+Example:
+	panmapFilterMissingVariant test1.panmap 0.75	Saves output to test1.miss0.75.panmap &
+test1.miss0.75.panmap.fa.
+##END_panmapFilterMissingVariant##
+
+
+###BEGIN_panmapFilterMissingSample###
+Usage: panmapFilterMissingSample panmap missing
+
+Description:
+	The panmapFilterMissingSample function filters the input panmap to remove samples with a percentage of values missing beyond the specified threshold. 
+
+Arguments:
+	panmap	ex: test1.panmap	Panmap to be processed.
+	missing	ex: 0.75	Missing percentage to be used. Must be in decimal format.
+
+Example:
+	panmapFilterMissingSample test1.panmap 0.75	Saves output to test1.Smiss0.75.panmap & test1.Smiss0.75.panmap.fa.
+##END_panmapFilterMissingSample##
+
+
+###BEGIN_panmapFilterMAF###
+Usage: panmapFilterMAF panmap MAF
+
+Description:
+	The panmapFilterMAF function filters the input panmap to remove variants with a minor allele frequency (MAF) below a specified threshold.
+
+Arguments:
+	panmap	ex: test1.panmap	Panmap to be processed.
+	maf	ex: 0.1	MAF percentage to be used. Must be in decimal format.
+
+Example:
+	panmapFilterMAF test1.panmap 0.1	Saves output to test1.MAF0.1.panmap & 
+test1.MAF0.1.panmap.fa.
+##END_panmapFilterMAF##
+
+
+########################################################################
+########################################################################
+
+
+###BEGIN_panmapGetAlleles###
+Usage: panmapGetAlleles panmap
+
+Description:
+	The panmapGetAlleles function calculates the minor allele frequency for each position in the input panmap and displays a table with the corresponding allele and frequency.
+
+Arguments:
+	panmap	ex: test1.panmap	Panmap to be processed.
+
+Example:
+	panmapGetAlleles test1.panmap
+##END_panmapGetAlleles##
+
+
+###BEGIN_panmapAlleleFreqStats###
+Usage: panmapAlleleFreqStats panmap
+
+Description:
+	The panmapAlleleFreqStats function calculates the minor allele frequency for each position in the input panmap and displays a table with the corresponding allele and frequency.
+
+Arguments:
+	panmap	ex: test1.panmap	Panmap to be processed.
+
+Example:
+	panmapAlleleFreqStats test1.panmap
+##END_panmapAlleleFreqStats##
+
+
+###BEGIN_panmapAlleleTypeFreq###
+Usage: panmapAlleleTypeFreq panmap
+
+Description:
+	The panmapAlleleTypeFreq function calculates the minor allele frequency for each position in the input panmap and displays a table with the corresponding allele and frequency.
+
+Arguments:
+	panmap	ex: test1.panmap	Panmap to be processed.
+
+Example:
+	panmapAlleleTypeFreq test1.panmap
+##END_panmapAlleleTypeFreq##
+
+
+###BEGIN_panmapNumParents###
+Usage: panmapNumParents panmap
+
+Description:
+	The panmapNumParents function calculates the minor allele frequency for each position in the input panmap and displays a table with the corresponding allele and frequency.
+
+Arguments:
+	panmap	ex: test1.panmap	Panmap to be processed.
+
+Example:
+	panmapNumParents test1.panmap
+##END_panmapNumParents##
+
+
+########################################################################
+########################################################################
+
+
+###BEGIN_panmapGetIDs###
+Usage: panmapGetIDs panmap 
+
+Description:
+	The panmapGetIDs function displays a list of the sample IDs from the input panmap.
+
+Arguments:
+	panmap	ex: test1.panmap	Panmap to be processed.
+
+Example:
+	panmapGetIDs test1.panmap
+##END_panmapGetIDs##
+
+
+###BEGIN_panmapGetFreqSampleAlleles###
+Usage: panmapGetFreqSampleAlleles panmap id
+
+Description:
+	The panmapGetFreqSampleAlleles function function displays the allele, frequency and depth for the specified sample.
+
+Arguments:
+	panmap	ex: test1.panmap	Panmap to be processed.
+	id	ex: "SM005"	ID to be selected.
+
+Example:
+	panmapGetFreqSampleAlleles test1.panmap "SM005"
+##END_panmapGetFreqSampleAlleles##
+
+
+###BEGIN_panmapGetUniqueSampleAlleles###
+Usage: panmapGetUniqueSampleAlleles panmap id
+
+Description:
+	The panmapGetUniqueSampleAlleles function displays only sites where the allele is unique for the specified sample.
+
+Arguments:
+	panmap	ex: test1.panmap	Panmap to be processed.
+	id	ex: "SM005"	ID to be selected.
+
+Example:
+	panmapGetUniqueSampleAlleles test1.panmap "SM005"
+##END_panmapGetUniqueSampleAlleles##
+
+
+###BEGIN_panmapGetROH###
+Usage: panmapGetROH panmap
+
+Description:
+	The panmapGetROH 
+
+Arguments:
+	panmap	ex: test1.panmap	Panmap to be processed.
+
+Example:
+	panmapGetROH test1.panmap	
+##END_panmapGetROH##
+
+
+###BEGIN_panmapLowFreqAlleleMask###
+Usage: panmapLowFreqAlleleMask panmap AF
+
+Description:
+	The panmapLowFreqAlleleMask function masks the alleles below the frequency threshold specified. 
+
+Arguments:
+	panmap	ex: test1.panmap	Panmap to be processed.
+	AF	ex: 0.1	Frequency threshold to be used. Must be in decimal format.
+
+Example:
+	panmapLowFreqAlleleMask test1.panmap 0.1	Saves output to test1.masked0.1.panmap & test1.masked0.1.panmap.fa
+##END_panmapLowFreqAlleleMask##
+
+
+###BEGIN_panmapGetHomoPolymorphic###
+Usage: panmapGetHomoPolymorphic panmap
+
+Description:
+	The panmapGetHomoPolymorphic extracts only the SNPs that are both homozygous and polymorphic from the input panmap.
+
+Arguments:
+	panmap	ex: test1.panmap	Panmap to be processed.
+
+Example:
+	panmapGetHomoPolymorphic test1.panmap	Saves output to test1.HomoPolymorphic.panmap &test1.HomoPolymorphic.panmap.fa
+##END_panmapGetHomoPolymorphic##
+
+
+###BEGIN_panmapSelParents###
+Usage: panmapSelParents panmap parents
+
+Description:
+	The panmapSelParents function changes the current parents in the input panmap to the selected theoretical parents. 
+
+Arguments:
+	panmap	ex: test1.panmap	Panmap to be processed.
+	parents	ex: "SM001,SM005"	Selected theoretical parents in a comma-delimited list.
+
+Example:
+	panmapSelParents test1.panmap "SM001,SM005"	Saves output to test1.Sel_2.panmap & test1.Sel_2.panmap.fa.
+##END_panmapSelParents##

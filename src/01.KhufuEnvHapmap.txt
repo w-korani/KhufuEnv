@@ -1,0 +1,43 @@
+##############################
+### hapmap processing
+##############################
+hapmapConcatenate hapmap hapmap > hapmap [stdout]
+hapmapMerge hapmap hapmap > hapmap [stdout]
+hapmapExtract hapmap bed > hapmap [stdout]
+hapmapSubtract hapmap bed > hapmap [stdout]
+##############################
+hapmapSNP2SV hapmap > hapmap [stdout]
+hapmapGetSNP hapmap > hapmap [stdout]
+hapmapGetSV hapmap > hapmap [stdout]
+hapmapGetDiAlleles hapmap > hapmap [stdout]
+##############################
+hapmap2txt hapmap > txt [stdout]
+hapmap2stdhapmap hapmap ref > stdhapmap [stdout]
+stdhapmap2hapmap stdhapmap > hapmap [stdout]
+hapmap2vcf hapmap ref > vcf [stdout]
+vcf2hapmap vcf > hapmap [stdout]
+##############################
+hapmapSplit hapmap > Dir:hapmapCHRs
+hapmapSampleIDsfromList hapmap list > hapmap [stdout]
+hapmapReAssignSampleIDsfromList hapmap list > hapmap [stdout]
+##############################
+hapmapCalculateMissingVariant hapmap > txt [stdout]
+hapmapCalculateMissingSample hapmap > txt [stdout]
+hapmapCalculateMAF hapmap > txt [stdout]
+hapmapFilterMissingVariant hapmap miss > hapmap [stdout]
+hapmapFilterMissingSample hapmap miss > hapmap [stdout]
+hapmapFilterMAF hapmap MAF > hapmap [stdout]
+##############################
+hapmapGetAlleles hapmap > txt [stdout]
+hapmapAlleleFreqStats hapmap > txt [stdout]
+hapmapAlleleTypeFreq hapmap > txt [stdout]
+##############################
+hapmapGetIDs hapmap > txt [stdout]
+hapmapGetFreqSampleAlleles hapmap id > txt [stdout]
+hapmapGetUniqueSampleAlleles hapmap id > hapmap [stdout]
+ hapmapGetROH
+hapmapLowFreqAlleleMask hapmap AF > hapmap [stdout]
+hapmapGetHomoPolymorphic hapmap > hapmap [stdout]
+hapmapGetConsensusCall hapmap min max > txt [stdout]
+##############################
+##############################
