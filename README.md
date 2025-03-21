@@ -15,19 +15,19 @@ R package
 ```
 2. go to the package folder
    ```
-cd KhufuEnv_main
+   cd KhufuEnv_main
    ```
 3. run the installer
 ```
-sudo bash ./installer.sh
+   sudo bash ./installer.sh
 ```
 4. add the source for the Bash Shell Environment
 ```
-echo "source /etc/KhufuEnv/call.sh"  >>  ~/.bashrc
+   echo "source /etc/KhufuEnv/call.sh"  >>  ~/.bashrc
 ```
 5. refresh the Bash Shell Environment
 ```
-. ~/.bashrc
+   . ~/.bashrc
 ```
 
 ## Uninstallation
