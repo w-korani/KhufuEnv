@@ -59,7 +59,8 @@ bedtools
 ```
    KhufuEnvHelp tool_name
 ```
-![Image](https://github.com/user-attachments/assets/6788031a-6318-49b2-8124-927d2cde984d)
+
+![Image](https://github.com/user-attachments/assets/21a55e37-a6d5-45bc-81e8-2e382639e375)
 
 ## Citation
 
