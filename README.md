@@ -19,7 +19,7 @@ R package
    ```
 3. run the installer
 ```
-   sudo ./installer.sh
+   sudo bash ./installer.sh
 ```
 4. add the source for the Bash Shell Environment
 ```
@@ -37,7 +37,7 @@ R package
    ```
 2. run the uninstaller
 ```
-   sudo ./uninstaller.sh
+   sudo bash ./uninstaller.sh
 ```
 3. remove the source for the Bash Shell Environment
 ```
