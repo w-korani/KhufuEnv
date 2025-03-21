@@ -33,24 +33,24 @@ R package
 ## Uninstallation
 1. go to the package folder
    ```
-cd KhufuEnv_main
+   cd KhufuEnv_main
    ```
 2. run the uninstaller
-```
-sudo bash ./uninstaller.sh
-```
+   ```
+   sudo bash ./uninstaller.sh
+   ```
 3. remove the source for the Bash Shell Environment
-```
-sed -i "/^source \/etc\/KhufuEnv\/call.sh$/d"  ~/.bashrc
-```
+   ```
+   sed -i "/^source \/etc\/KhufuEnv\/call.sh$/d"  ~/.bashrc
+   ```
 4. refresh the Bash Shell Environment
-```
-. ~/.bashrc
-```
+   ```
+   . ~/.bashrc  
+   ```
 or
-```
-exec bash
-```
+   ```
+   exec bash
+   ```
 
 
 ## Getting Help
