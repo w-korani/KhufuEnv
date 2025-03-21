@@ -5,8 +5,7 @@
 - does a simple job.
 
 ## Requirments
-R
-bedtools
+R package
 
 ## Installation
 
