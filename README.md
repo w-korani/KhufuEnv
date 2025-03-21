@@ -29,6 +29,10 @@ R package
 ```
    . ~/.bashrc
 ```
+or
+```
+exec bash
+```
 
 ## Uninstallation
 1. go to the package folder
@@ -46,6 +50,10 @@ R package
 4. refresh the Bash Shell Environment
 ```
    . ~/.bashrc
+```
+or
+```
+exec bash
 ```
 
 
