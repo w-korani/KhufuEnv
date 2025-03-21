@@ -11,7 +11,7 @@ R package
 
 1. download the package
 ```
-git clone https://github.com/w-korani/KhufuEnv
+   git clone https://github.com/w-korani/KhufuEnv
 ```
 2. go to the package folder
    ```
