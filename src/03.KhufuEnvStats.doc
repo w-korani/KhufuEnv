@@ -1,0 +1,271 @@
+####################################
+############## Stats ###############
+####################################
+
+########################################################################
+########################################################################
+
+###BEGIN_avg###
+Usage: avg infile index
+
+Description:
+	The avg function processes the input dataset by grouping its data based on the specified index and calculating the average of numerical columns within each group. The dataset must include unique non-numeric headers for each column.
+
+Arguments:
+	infile	ex: test1.stat	Input file to be processed.
+	index	ex: 1	Column for grouping.                    
+
+Example:
+	avg test1.stat 1	
+##END_avg##
+
+
+###BEGIN_std###
+Usage: std infile index
+
+Description:
+	The std function processes the input dataset by grouping its data based on the specified index and calculating the standard deviation of numerical columns within each group. The dataset must include unique non-numeric headers for each column.
+
+Arguments:
+	infile	ex: test2.stat	Input file to be processed.
+	index	ex: 1	Column for grouping.                   
+
+Example:
+	std test2.stat 1
+##END_std##
+
+
+###BEGIN_sum###
+Usage: sum infile index
+
+Description:
+	The sum function processes the input dataset by grouping its data based on the specified index and calculating the sum of numerical columns within each group. The dataset must include unique non-numeric headers for each column.
+
+Arguments:
+	infile	ex: test1.stat	Input file to be processed.
+	index	ex: 1	Column for grouping.                   
+
+Example:
+	sum test1.stat 1	
+##END_sum##
+
+
+###BEGIN_min###
+Usage: min infile index
+
+Description:
+	The min function processes the input dataset by grouping its data based on the specified index and calculating the minimum value of numerical columns within each group. The dataset must include unique non-numeric headers for each column.
+
+Arguments:
+	infile	ex: test1.stat	Input file to be processed.
+	index	ex: 1	Column for grouping.                 
+
+Example:
+	min test1.stat 1	
+##END_min##
+
+
+###BEGIN_max###
+Usage: max infile index
+
+Description:
+	The max function processes the input dataset by grouping its data based on the specified index and calculating the maximum value of numerical columns within each group. The dataset must include unique non-numeric headers for each column.
+
+Arguments:
+	infile	ex: test1.stat	Input file to be processed.
+	index	ex: 1	Column for grouping.                 
+
+Example:
+	max test1.stat 1	
+##END_max##
+
+
+###BEGIN_med###
+Usage: med infile index
+
+Description:
+	The med function processes the input dataset by grouping its data based on the specified index and calculating the median value of numerical columns within each group. The dataset must include unique non-numeric headers for each column. 
+
+Arguments:
+	infile	ex: test1.stat	Input file to be processed.
+	index	ex: 1	Column for grouping.                 
+
+Example:
+	med test1.stat 1	
+##END_med##
+
+
+########################################################################
+########################################################################
+
+
+###BEGIN_avgCol###
+Usage: avgCol dataset
+
+Description:
+	The avgCol function calculates the mean of the numerical values in each column. Missing values will be excluded. Non-numeric text must be removed first.
+
+Arguments:
+	dataset	ex: test3.stat	Dataset to be processed.
+
+Example:
+	avgCol test3.stat 
+##END_avgCol##
+
+
+###BEGIN_stdCol###
+Usage: stdCol dataset
+
+Description:
+	The stdCol function calculates the standard deviation of the numerical values in each column. Missing values will be excluded. Non-numeric text must be removed first.
+
+Arguments:
+	dataset	ex: test3.stat	Dataset to be processed.
+
+Example:
+	stdCol test3.stat
+##END_stdCol##
+
+
+###BEGIN_sumCol###
+Usage: sumCol dataset
+
+Description:
+	The sumCol function calculates the sum of the numerical values in each column. Missing values will be excluded. Non-numeric text must be removed first.
+
+Arguments:
+	dataset	ex: test3.stat	Dataset to be processed.                 
+
+Example:
+	sumCol test3.stat
+##END_sumCol##
+
+
+###BEGIN_minCol###
+Usage: minCol dataset
+
+Description:
+	The minCol function calculates the minimum numerical value of each column. Missing values will be excluded. Non-numeric text must be removed first.
+
+Arguments:
+	dataset	ex: test3.stat	Dataset to be processed.
+
+Example:
+	minCol test3.stat
+##END_minCol##
+
+
+###BEGIN_maxCol###
+Usage: maxCol dataset
+
+Description:
+	The maxCol function calculates the maximum numerical value of each column. Missing values will be excluded. Non-numeric text must be removed first.
+
+Arguments:
+	dataset	ex: test3.stat	Dataset to be processed.
+
+Example:
+	maxCol test3.stat
+##END_maxCol##
+
+
+###BEGIN_medCol###
+Usage: medCol dataset
+
+Description:
+	The medCol function calculates the median value of each column. Missing values will be excluded. Non-numeric text must be removed first.
+
+Arguments:
+	dataset	ex: test3.stat	Dataset to be processed.
+
+Example:
+	medCol test3.stat
+##END_medCol##
+
+
+########################################################################
+########################################################################
+
+
+###BEGIN_avgRow###
+Usage: avgRow dataset
+
+Description:
+	The avgRow function calculates the mean of the numerical values in each row. Missing values will be excluded. Non-numeric text must be removed first.
+
+Arguments:
+	dataset	ex: test3.stat	Dataset to be processed.
+
+Example:
+	avgRow test3.stat 
+##END_avgRow##
+
+
+###BEGIN_stdRow###
+Usage: stdRow dataset
+
+Description:
+	The stdRow function calculates the standard deviation of the numerical values in each row. Missing values will be excluded. Non-numeric text must be removed first.
+
+Arguments:
+	dataset	ex: test3.stat	Dataset to be processed.                   
+
+Example:
+	stdRow test3.stat
+##END_stdRow##
+
+
+###BEGIN_sumRow###
+Usage: sumRow dataset
+
+Description:
+	The sumRow function calculates the sum of the numerical values in each row. Missing values will be excluded. Non-numeric text must be removed first.
+
+Arguments:
+	dataset	ex: test3.stat	Dataset to be processed.                 
+
+Example:
+	sumRow test3.stat
+##END_sumRow##
+
+
+###BEGIN_minRow###
+Usage: minRow dataset
+
+Description:
+	The minRow function calculates the minimum numerical value of each row. Missing values will be excluded. Non-numeric text must be removed first.
+
+Arguments:
+	dataset	ex: test3.stat	Dataset to be processed.
+
+Example:
+	minRow test3.stat  
+##END_minRow##
+
+
+###BEGIN_maxRow###
+Usage: maxRow dataset
+
+Description:
+	The maxRow function calculates the maximum numerical value of each row. Missing values will be excluded. Non-numeric text must be removed first.
+
+Arguments:
+	dataset	ex: test3.stat	Dataset to be processed.                 
+
+Example:
+	maxRow test3.stat	
+##END_maxRow##
+
+
+###BEGIN_medRow###
+Usage: medRow dataset
+
+Description:
+	The medRow function calculates the median value of each row. Missing values will be excluded. Non-numeric text must be removed first.
+
+Arguments:
+	dataset	ex: test3.stat	Dataset to be processed.                 
+
+Example:
+	medRow test3.stat	
+##END_medRow##

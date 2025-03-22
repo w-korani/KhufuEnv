@@ -1,0 +1,47 @@
+
+##############################
+### panmap processing
+##############################
+panmapConcatenate panmap panmap > panmap
+panmapMerge panmap panmap > panmap
+panmapExtract panmap bed > panmap
+panmapSubtract panmap bed > panmap
+##############################
+panmapGetFasta panmap panmap > fasta 
+panmapGetSNP panmap > panmap
+panmapGetSV panmap > panmap
+panmapGetDiAlleles panmap > panmap
+##############################
+panmap2txt panmap > txt [stdout]
+panmap2hapmap panmap > hapmap [stdout]
+hapmap2panmap hapmap parents > panmap
+panmap2vcf panmap > vcf [stdout]
+vcf2panmap vcf parents > panmap
+panmap2heatmap panmap > heatmap [stdout]
+heatmap2panmap > heatmap > panmap [stdout]
+##############################
+panmapSplit panmap > Dir:panmapCHRs
+panmapSampleIDsfromList panmap list > panmap
+panmapReAssignSampleIDsfromList panmap list > panmap
+##############################
+panmapCalculateMissingVariant panmap > txt [stdout]
+panmapCalculateMissingSample panmap > txt [stdout]
+panmapCalculateMAF panmap > txt [stdout]
+panmapFilterMissingVariant panmap miss > panmap
+panmapFilterMissingSample panmap miss > panmap
+panmapFilterMAF panmap MAF > panmap
+##############################
+panmapGetAlleles panmap > txt [stdout]
+panmapAlleleFreqStats panmap > txt [stdout]
+panmapAlleleTypeFreq panmap > txt [stdout]
+panmapNumParents panmap > int [stdout]
+##############################
+panmapGetIDs panmap > txt [stdout]
+panmapGetFreqSampleAlleles panmap id > txt [stdout]
+panmapGetUniqueSampleAlleles panmap id > panmap [stdout]
+panmapGetROH panmap count > txt [stdout]
+panmapLowFreqAlleleMask panmap AF > panmap
+panmapGetHomoPolymorphic panmap > panmap
+panmapSelParents panmap parents > panmap
+##############################
+##############################

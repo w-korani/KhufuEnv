@@ -1,0 +1,26 @@
+
+##############################
+### general stats
+##############################
+avg infile index > txt [stdout]
+std infile index > txt [stdout]
+sum infile index > txt [stdout]
+min infile index > txt [stdout]
+max infile index > txt [stdout]
+med infile index > txt [stdout]
+##############################
+avgCol dataset > txt [stdout]
+stdCol dataset > txt [stdout]
+sumCol dataset > txt [stdout]
+minCol dataset > txt [stdout]
+maxCol dataset > txt [stdout]
+medCol dataset > txt [stdout]
+##############################
+avgRow dataset > txt [stdout]
+stdRow dataset > txt [stdout]
+sumRow dataset > txt [stdout]
+minRow dataset > txt [stdout]
+maxRow dataset > txt [stdout]
+medRow dataset > txt [stdout]
+##############################
+##############################

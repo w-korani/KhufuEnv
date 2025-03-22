@@ -1,0 +1,487 @@
+####################################
+############## hapmap ##############
+####################################
+
+########################################################################
+########################################################################
+
+###BEGIN_hapmapConcatenate###
+Usage: hapmapConcatenate hapmap1 hapmap2
+
+Description:
+	The hapmapConcatenate function combines row data for two input hapmaps. Row data is combined only for shared sample IDs. All other columns will be dropped.
+
+Arguments:
+	hapmap1	ex: test1.hapmap	Hapmap to be processed.
+	hapmap2	ex: test3.hapmap	Hapmap to be processed.
+
+Example:
+	hapmapConcatenate test1.hapmap test3.hapmap
+##END_hapmapConcatenate##
+
+
+###BEGIN_hapmapMerge###
+Usage: hapmapMerge hapmap1 hapmap2
+
+Description:
+	The hapmapMerge function joins two input hapmaps in the order they are passed to the function. This function is ideal for merging a hapmap back together after splitting samples. Note: All row data existing in the right hapmap that does not exist in the left hapmap will be dropped.
+
+Arguments:
+	hapmap1	ex: test1.hapmap	Hapmap to be processed.
+	hapmap2	ex: test2.hapmap	Hapmap to be processed.
+
+Example:
+	hapmapMerge test1.hapmap test2.hapmap
+##END_hapmapMerge##
+
+
+###BEGIN_hapmapExtract###
+Usage: hapmapExtract hapmap bed
+
+Description:
+	The hapmapExtract function will extract and display the input hapmap data matching the data in the bed file. 
+
+Arguments:
+	hapmap	ex: test1.hapmap	Hapmap to be processed.
+	bed	ex: test1.bed	Data to be extracted.
+
+Example:
+	hapmapExtract test1.hapmap test1.bed
+##END_hapmapExtract##
+
+
+###BEGIN_hapmapSubtract###
+Usage: hapmapSubtract hapmap bed
+
+Description:
+	The hapmapSubtract function will subtract data from the input hapmap matching data in the bed file and display the remaining data. 
+
+Arguments:
+	hapmap	ex: test1.hapmap	Hapmap to be processed.
+	bed	ex: test1.bed	Data to be subtracted.
+
+Example:
+	hapmapSubtract test1.hapmap test1.bed
+##END_hapmapSubtract##
+
+########################################################################
+########################################################################
+
+###BEGIN_hapmapSNP2SV###
+Usage: hapmapSNP2SV hapmap
+
+Description:
+	The hapmapSNP2SV function modifies the input hapmap by inserting commas to distinguish SNPs from structural variants.
+
+Arguments:
+	hapmap	ex: test1.hapmap	Hapmap to be processed.
+	
+Example:
+	hapmapSNP2SV test1.hapmap
+##END_hapmapSNP2SV##
+
+
+###BEGIN_hapmapGetSNP###
+Usage: hapmapGetSNP hapmap
+
+Description:
+	The hapmapGetSNP function filters out structural variants from the input hapmap, resulting in a hapmap file with only SNPs remaining.
+
+Arguments:
+	hapmap	ex: test1.hapmap	Hapmap to be processed.
+
+Example:
+	hapmapGetSNP test1.hapmap
+##END_hapmapGetSNP##
+
+
+###BEGIN_hapmapGetSV###
+Usage: hapmapGetSV hapmap
+
+Description:
+	The hapmapGetSV function filters out SNPs from the input hapmap, resulting in a hapmap file with only structural variants remaining.
+
+Arguments:
+	hapmap	ex: test1.hapmap	Hapmap to be processed.
+
+Example:
+	hapmapGetSV test1.hapmap
+##END_hapmapGetSV##
+
+
+###BEGIN_hapmapGetDiAlleles###
+Usage: hapmapGetDiAlleles hapmap
+
+Description:
+	The hapmapGetDiAlleles function filters the input hapmap to display only diallelic SNPs.
+
+Arguments:
+	hapmap	ex: test1.hapmap	Hapmap to be processed.
+
+Example:
+	hapmapGetDiAlleles test1.hapmap
+##END_hapmapGetDiAlleles##
+
+########################################################################
+########################################################################
+
+###BEGIN_hapmap2txt###
+Usage: hapmap2txt hapmap
+
+Description:
+	The hapmap2txt function combines the chromosome and position data from the input hapmap into a single column, i.e., chr_pos, and then displays the column data for all the samples. 
+
+Arguments:
+	hapmap	ex: test1.hapmap	Hapmap to be processed.
+
+Example:
+	hapmap2txt test1.hapmap
+##END_hapmap2txt##
+
+
+###BEGIN_hapmap2stdhapmap###
+Usage: hapmap2stdhapmap hapmap ref
+
+Description:
+	The hapmap2stdhapmap function transforms an abbreviated input hapmap to a standard hapmap using a reference genome.
+
+Arguments:
+	hapmap	ex: test1.hapmap	Hapmap to be processed.
+	ref	ex: ref.fa	Reference genome to be used.
+
+Example:
+	hapmap2stdhapmap test1.hapmap ref.fa
+##END_hapmap2stdhapmap##
+
+
+###BEGIN_stdhapmap2hapmap###
+Usage: stdhapmap2hapmap hapmap
+
+Description:
+	The stdhapmap2hapmap function transforms a standard input hapmap to an abbreviated hapmap.
+
+Arguments:
+	stdhapmap	ex: test1.std.hapmap	Hapmap to be processed. Must be standard hapmap format.
+
+Example:
+	stdhapmap2hapmap test1.std.hapmap
+##END_stdhapmap2hapmap##
+
+
+###BEGIN_hapmap2vcf###
+Usage: hapmap2vcf hapmap ref
+
+Description:
+	The hapmap2vcf function transforms an input hapmap to a vcf-like format using the reference genome to match up the reference and alternate alleles.
+
+Arguments:
+	hapmap	ex: test1.hapmap	Hapmap to be processed.
+	ref	ex: ref.fa	Reference genome to be used. 
+
+Example:
+	hapmap2vcf test1.hapmap ref.fa
+##END_hapmap2vcf##
+
+
+###BEGIN_vcf2hapmap###
+Usage: vcf2hapmap vcf
+
+Description:
+	The vcf2hapmap function transforms an input vcf to an abbreviated hapmap.
+
+Arguments:
+	vcf	ex: test1.vcf	vcf to be processed.
+
+Example:
+	vcf2hapmap test1.vcf
+##END_vcf2hapmap##
+
+########################################################################
+########################################################################
+
+
+###BEGIN_hapmapSplit###
+Usage: hapmapSplit hapmap 
+
+Description:
+	The hapmapSplit function splits the input hapmap data by chromosome, saving each chromosomes data into a separate output file. The output files are stored in subdirectory, hapmapCHRs, within the current working directory.
+
+Arguments:
+	hapmap	ex: test1.hapmap	Hapmap to be processed.
+
+Example:
+	hapmapSplit test1.hapmap	Saves output to hapmapCHRs directory.
+##END_hapmapSplit##
+
+
+###BEGIN_hapmapSampleIDsfromList###
+Usage: hapmapSampleIDsfromList hapmap list
+
+Description:
+	The hapmapSampleIDsfromList function extracts and displays the data from the input hapmap for only the sample IDs in the list file. 
+
+Arguments:
+	hapmap	ex: test1.hapmap	Hapmap to be processed. Must be hapmap format.
+	list	ex: selectedSample.list	List of sample IDs.
+
+Example:
+	hapmapSampleIDsfromList test1.hapmap selectedSample.list
+##END_hapmapSampleIDsfromList##
+
+
+###BEGIN_hapmapReAssignSampleIDsfromList###
+Usage: hapmapReAssignSampleIDsfromList hapmap list
+
+Description:
+	The hapmapReAssignSampleIDsfromList function reassigns the sample IDs of the input hapmap using the corresponding input list of new sample IDs.
+
+Arguments:
+	hapmap	ex: test1.hapmap	Hapmap to be processed. 
+	list	ex: reassignSample.list	List of new sample IDs to replace the original sample IDs. Must be in two column, tab-delimited format with ALL original sample IDs first, followed by the new corresponding sample IDs.
+
+Example:
+	hapmapReAssignSampleIDsfromList test1.hapmap reassignSample.list
+##END_hapmapReAssignSampleIDsfromList##
+
+########################################################################
+########################################################################
+
+###BEGIN_hapmapCalculateMissingVariant###
+Usage: hapmapCalculateMissingVariant hapmap
+
+Description:
+	 The hapmapCalculateMissingVariant function uses the input hapmap to calculate the percentage of missing variants at each site and displays the result in decimal format.
+
+Arguments:
+	hapmap	ex: test1.hapmap	Hapmap to be processed.
+
+Example:
+	hapmapCalculateMissingVariant test1.hapmap
+##END_hapmapCalculateMissingVariant##
+
+
+###BEGIN_hapmapCalculateMissingSample###
+Usage: hapmapCalculateMissingSample hapmap
+
+Description:
+	The hapmapCalculateMissingSample function uses the input hapmap to calculate the percentage of missing variants for each sample and displays the result in decimal format.
+
+Arguments:
+	hapmap	ex: test1.hapmap	Hapmap to be processed.
+
+Example:
+	hapmapCalculateMissingSample test1.hapmap
+##END_hapmapCalculateMissingSample##
+
+
+###BEGIN_hapmapCalculateMAF###
+Usage: hapmapCalculateMAF hapmap
+
+Description:
+	The hapmapCalculateMAF function calculates the minor allele frequency for each site in the input hapmap and displays a table with the corresponding allele and frequency.
+
+Arguments:
+	hapmap	ex: test1.hapmap	Hapmap to be processed.
+
+Example:
+	hapmapCalculateMAF test1.hapmap
+##END_hapmapCalculateMAF##
+
+
+###BEGIN_hapmapFilterMissingVariant###
+Usage: hapmapFilterMissingVariant hapmap missing
+
+Description:
+	The hapmapFilterMissingVariant function filters the input hapmap to remove sites where the percentage of variants missing is greater than the specified threshold. 
+
+Arguments:
+	hapmap	ex: test1.hapmap	Hapmap to be processed. 
+	missing	ex: 0.75	Missing percentage to be used. Must be in decimal format.
+
+Example:
+	hapmapFilterMissingVariant test1.hapmap 0.75
+##END_hapmapFilterMissingVariant##
+
+
+###BEGIN_hapmapFilterMissingSample###
+Usage: hapmapFilterMissingSample hapmap missing
+
+Description: 
+	The hapmapFilterMissingSample function filters the input hapmap to remove samples where the percentage of values missing is greater than the specified threshold. 
+	
+Arguments:
+	hapmap	ex: test1.hapmap	Hapmap to be processed.
+	missing	ex: 0.75	Missing percentage to be used. Must be in decimal format.
+
+Example:
+	hapmapFilterMissingSample test1.hapmap 0.75    
+##END_hapmapFilterMissingSample##
+
+
+###BEGIN_hapmapFilterMAF###
+Usage: hapmapFilterMAF hapmap MAF
+
+Description:
+	The hapmapFilterMAF function filters the input hapmap to remove variants with a minor allele frequency (MAF) below the specified threshold. 
+
+Arguments:
+	hapmap	ex: test1.hapmap	Hapmap to be processed. 
+	maf	ex: 0.1	MAF percentage to be used. Must be in decimal format.
+
+Example:
+	hapmapFilterMAF test1.hapmap 0.1
+##END_hapmapFilterMAF##
+
+
+########################################################################
+########################################################################
+
+
+###BEGIN_hapmapGetAlleles###
+Usage: hapmapGetAlleles hapmap
+
+Description:
+	The hapmapGetAlleles function gets a list of the unique alleles for all of the sites in the input hapmap.
+
+Arguments:
+	hapmap	ex: test1.hapmap	Hapmap to be processed.
+	
+Example:
+	hapmapGetAlleles test1.hapmap
+##END_hapmapGetAlleles##
+
+
+###BEGIN_hapmapAlleleFreqStats###
+Usage: hapmapAlleleFreqStats hapmap
+
+Description:
+	The hapmapAlleleFreqStats function calculates allele statistics from the input hapmap, displaying the alleles and their frequency, count, and sum.
+
+Arguments:
+	hapmap	ex: test1.hapmap	Hapmap to be processed.
+	
+Example:
+	hapmapAlleleFreqStats test1.hapmap
+##END_hapmapAlleleFreqStats##
+
+
+###BEGIN_hapmapAlleleTypeFreq###
+Usage: hapmapAlleleTypeFreq hapmap
+
+Description: 
+	The hapmapAlleleTypeFreq function displays the input hapmap alleles and their calculated frequencies for A, B, and H in decimal form. 
+	
+Arguments:
+	hapmap	ex: test1.hapmap	Hapmap to be processed.
+
+Example:
+	hapmapAlleleTypeFreq test1.hapmap
+##END_hapmapAlleleTypeFreq##
+
+
+########################################################################
+########################################################################
+
+
+###BEGIN_hapmapGetIDs###
+Usage: hapmapGetIDs hapmap
+
+Description:
+	The hapmapGetIDs function displays a list of the sample IDs from the input hapmap.
+
+Arguments:
+	hapmap	ex: test1.hapmap	Hapmap to be processed. 
+
+Example:
+	hapmapGetIDs test1.hapmap 
+##END_hapmapGetIDs##
+
+
+###BEGIN_hapmapGetFreqSampleAlleles###
+Usage: hapmapGetFreqSampleAlleles hapmap id
+
+Description:
+	The hapmapGetFreqSampleAlleles function displays the allele, frequency and depth for the specified sample.
+
+Arguments:
+	hapmap	ex: test1.hapmap	Hapmap to be processed. 
+	id	ex: "SM001"	ID selected.
+
+Example:
+	hapmapGetFreqSampleAlleles test1.hapmap "SM001"
+##END_hapmapGetFreqSampleAlleles##
+
+
+###BEGIN_hapmapGetUniqueSampleAlleles###
+Usage: hapmapGetUniqueSampleAlleles hapmap id
+
+Description:
+	The hapmapGetUniqueSampleAlleles function displays only sites where the allele is unique for the specified sample ID. 
+
+Arguments:
+	hapmap	ex: test1.hapmap	Hapmap to be processed. 
+	id	ex: "SM001"	ID selected.
+
+Example:
+	hapmapGetUniqueSampleAlleles test1.hapmap "SM001"
+##END_hapmapGetUniqueSampleAlleles##
+
+
+###BEGIN_hapmapGetROH###
+Usage: hapmapGetROH hapmap count
+
+Description:
+	The hapmapGetROH function calculates the ROH for the input hapmap, displaying the ID, chromosome, starting position (pos1), ending position (pos2), length of the run, and number of variants in the region meeting the minimum count threshold set. If no minimum count threshold is set, the default = 50.
+
+Arguments:
+	hapmap	ex: input.hapmap Hapmap to be processed.
+	count	ex: 50	Minimum count of variants in the region.
+
+Example:
+	hapmapGetROH dog.chr38.hapmap 50
+##END_hapmapGetROH##
+
+
+###BEGIN_hapmapLowFreqAlleleMask###
+Usage: hapmapLowFreqAlleleMask hapmap freq
+
+Description:
+	The hapmapLowFreqAlleleMask function masks the alleles below the frequency threshold specified.
+
+Arguments:
+	hapmap	ex: input.hapmap	Hapmap to be processed.
+	freq	ex: 0.05	Frequency threshold to be used. Must be in decimal format.
+
+Example:
+	hapmapLowFreqAlleleMask test1.hapmap 0.05
+##END_hapmapLowFreqAlleleMask##
+
+
+###BEGIN_hapmapGetHomoPolymorphic###
+Usage: hapmapGetHomoPolymorphic hapmap
+
+Description: 
+	The hapmapGetHomoPolymorphic function filters out sites from the input hapmap that are not both homozygous and polymorphic.
+	
+Arguments:
+	hapmap	ex: test1.hapmap	Hapmap to be processed.
+
+Example: 
+	hapmapGetHomoPolymorphic test1.hapmap
+##END_hapmapGetHomoPolymorphic##
+
+
+###BEGIN_hapmapGetConsensusCall###
+Usage: hapmapGetConsensusCall hapmap min max
+
+Description: 
+	The hapmapGetConsensusCall function assigns consensus alleles at each site where the allele frequency falls within the specified threshold range. If a range is not specified the default min = 0.1 and max = 0.9.
+	
+Arguments:
+	hapmap	ex: test1.hapmap	Hapmap to be processed.
+	min	ex: 0.4	Minimum frequency threshold.
+	max	ex: 0.7 Maximum frequency threshold.
+	
+Example: 
+	hapmapGetConsensusCall test1.hapmap 0.4 0.7
+##END_hapmapGetConsensusCall##

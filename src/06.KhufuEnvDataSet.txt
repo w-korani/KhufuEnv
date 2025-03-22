@@ -1,0 +1,27 @@
+
+##############################
+### data set processing
+##############################
+dimDS ds > txt [stdout]
+getIDsDS ds > txt [stdout]
+revertDS ds > ds [stdout]
+transverseDS ds > ds [stdout]
+long2wideDS ds > ds [stdout]
+wide2longDS ds > ds [stdout]
+sortValuesDS ds > ds [stdout]
+sortReverseValuesDS ds > ds [stdout]
+sortUniqueValuesDS ds > ds [stdout]
+maxValuesDS ds > ds [stdout]
+minValuesDS ds > ds [stdout]
+minSkipZeroValuesDS ds > ds [stdout]
+maxLenDS ds > ds [stdout]
+minLenDS ds > ds [stdout]
+#############
+merge ds1 ds2 > ds [stdout]
+subtract ds1 ds2 > ds [stdout]
+reorderDSfromDS ds1 ds2 > ds [stdout]
+reorderDSfromList ds list > ds [stdout]
+combineSimilarColumnDS ds1 ds2 > ds [stdout]
+uniqueDS ds > txt [stdout]
+##############################
+##############################
