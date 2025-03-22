@@ -1,11 +1,16 @@
 # KhufuEnv
 
+KhufuEnv, an open-source, flexible, auxiliary environment for manipulating and analyzing genomic data, among other datasets, in the Unix environment. The KhufuEnv provides a buildable platform for constructing pipelines for several genomic analyses across different species. 
+
+Every tool in KhufuEnv should meet the following criteria
 - single-thread process.
 - does not need big compuataional resources.
 - does a simple job.
+- to be run using bash script
+- does not need special dependencies or other third-party computational tools
 
 ## Requirments
-R package
+R package (basic & plyr packages)
 
 ## Installation
 
