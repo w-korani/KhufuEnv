@@ -74,5 +74,5 @@ R package (basic, in addition to data.table & plyr packages)
 bioxiv
 
 ## Available tools
-![Image](https://github.com/user-attachments/assets/74a90151-a7fd-4c6d-97f0-a84d93df4590)
+![Image](https://github.com/user-attachments/assets/b99ac621-bd35-4f61-a3a0-3f6a70c4e028)
 
