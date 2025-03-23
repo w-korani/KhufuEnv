@@ -69,8 +69,10 @@ R package (basic, in addition to data.table & plyr packages)
    KhufuEnvHelp tool_name
 ```
 
-![Image](https://github.com/user-attachments/assets/21a55e37-a6d5-45bc-81e8-2e382639e375)
 
 ## Citation
+bioxiv
 
+## Available tools
+![Image](https://github.com/user-attachments/assets/74a90151-a7fd-4c6d-97f0-a84d93df4590)
 
