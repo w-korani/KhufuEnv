@@ -4,12 +4,12 @@ KhufuEnv, an open-source, flexible, auxiliary environment for manipulating and a
 
 Every tool in KhufuEnv should meet the following criteria
 - single-thread process.
-- does not need big compuataional resources.
+- does not need big computational resources.
 - does a simple job.
 - to be run using bash script
 - does not need special dependencies or other third-party computational tools
 
-## Requirments
+## Requirements
 R package (basic, in addition to data.table & plyr packages)
 
 ## Installation
