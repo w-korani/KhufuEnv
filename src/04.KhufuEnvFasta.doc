@@ -11,7 +11,7 @@ Usage: fasta2txt fasta
 Description:
 	The fasta2txt function reformats the input fasta to a text format. The header and sequence data for each chromosome appear in one line, tab-delimited, and the sequence is continuous without line breaks.
 
-Arguments:
+Parameters:
 	fasta	ex: test1.fasta	Fasta to be processed.                   
 
 Example:
@@ -25,7 +25,7 @@ Usage: txt2fasta txt_fasta
 Description:
 	The txt2fasta function reformats the input text fasta so that the header and sequence are on two separate lines. The header begins with the ">" character, and the sequence begins on the next line, wrapped every 120 characters.
 
-Arguments:
+Parameters:
 	txt_fasta	ex: test1.fasta.txt	Input text fasta to be processed.                   
 
 Example:
@@ -39,7 +39,7 @@ Usage: fastaUnWrap fasta
 Description:
 	The fastaUnWrap function reformats the input fasta to display the header and sequence in two separate lines, and the sequences are continuous without line breaks.
 
-Arguments:
+Parameters:
 	fasta	ex: test1.fasta	Input fasta to be processed.                   
 
 Example:
@@ -53,7 +53,7 @@ Usage: fastaWrap fasta
 Description:
 	The fastaWrap function reformats the input fasta to display the header and sequence in two separate lines, and the sequences wrapped every 120 characters.
 
-Arguments:
+Parameters:
 	fasta	ex: test1.fa	Input fasta to be processed.                   
 
 Example:
@@ -67,7 +67,7 @@ Usage: fastaSeqLen fasta
 Description:
 	The fastaSeqLen function calculates the length of each sequence, displaying the header and sequence length in a two-column, tab-delimited format. 
 
-Arguments:
+Parameters:
 	fasta	ex: test1.fasta	Input fasta to be processed.                   
 
 Example:
@@ -81,7 +81,7 @@ Usage: fastaLen fasta
 Description:
 	The fastaLen function calulates the total sequence length.
 
-Arguments:
+Parameters:
 	fasta	ex: test1.fasta	Input fasta to be processed.                   
 
 Example:
@@ -95,7 +95,7 @@ Usage: fasta2kmer fasta width move
 Description:
 	The fasta2kmer function splits the sequences into kmers of the specified window width and step size.
 
-Arguments:
+Parameters:
 	fasta	ex: test1.fasta	Input fasta to be processed.
 	width	ex: 50	Width of the window.
 	move	ex: 25	Step size.
@@ -111,7 +111,7 @@ Usage: fastaCombine fasta
 Description:
 	The fastaCombine function combines sequences with the same header name.
 
-Arguments:
+Parameters:
 	fasta	ex: test2.fasta	Input fasta to be processed.                   
 
 Example:
@@ -125,7 +125,7 @@ Usage: fastaAlleleCombine fasta
 Description:
 	The fastaAlleleCombine function combines sequences with the same header name and separates the sequences by commas so that the alleles from each individual sequence can still be distinguished.
 
-Arguments:
+Parameters:
 	fasta	ex: test2.fasta	Input fasta to be processed.                   
 
 Example:
@@ -139,7 +139,7 @@ Usage: fastaSelID fasta list
 Description:
 	The fastaSelID function extracts and displays the data from the input fasta for only the sample IDs in the list file.
 
-Arguments:
+Parameters:
 	fasta	ex: test3.fasta	Input file to be processed.
 	list	ex: test.list	List of sample IDs.                 
 
@@ -154,7 +154,7 @@ Usage: fastaFilterLen fasta len
 Description:
 	The fastaFilterLen function filters out sequences below the specified minimum length.
 
-Arguments:
+Parameters:
 	fasta	ex: test1.fasta	Input fasta to be processed.
 	length	ex: 1001	Length of sequences to be filtered out.                   
 
@@ -169,7 +169,7 @@ Usage: fastaSplit fasta
 Description:
 	The fastaSplit function splits the input fasta data by chromosome, saving each chromosomes data into a separate output file. The output files are stored in subdirectory, fastaCHRs, within the current working directory.
 
-Arguments:
+Parameters:
 	fasta	ex: test1.fasta	Input fasta to be processed.                   
 
 Example:

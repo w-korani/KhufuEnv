@@ -11,7 +11,7 @@ Usage: dimDS dataset
 Description:
 	The dimDS function calulates the number of rows and columns in the input dataset and returns the total number of data points and the dimensions. Format appears as: TOTAL: ROWS*COLUMNS.
 
-Arguments:
+Parameters:
 	dataset	ex: test1.txt	Input dataset to be processed.
 
 Example:
@@ -25,7 +25,7 @@ Usage: getIDsDS dataset
 Description:
 	The getIDsDS function extracts the header IDs from the input dataset and displays a two-column tab-delimited table with the index and ID. 
 
-Arguments:
+Parameters:
 	dataset	ex: test1.txt	Input dataset to be processed.
 
 Example:
@@ -39,7 +39,7 @@ Usage: revertDS dataset
 Description:
 	The revertDS function reverses the order of the rows in the input dataset.
 
-Arguments:
+Parameters:
 	dataset	ex: test1.txt	Input dataset to be processed.
 
 Example:
@@ -53,7 +53,7 @@ Usage: transverseDS dataset
 Description:
 	The transverseDS function transposes the input file, swapping the rows and columns.
 
-Arguments:
+Parameters:
 	dataset	ex: test1.txt	Input dataset to be processed.
 
 Example:
@@ -67,7 +67,7 @@ Usage: long2wideDS dataset
 Description:
 	The long2wideDS function reshapes the dataset from a long to wide format. The unique values from factor2 are rearranged into separate columns. Values corresponding to each combination of factor1 and factor2 appear in their respective columns.
 
-Arguments:
+Parameters:
 	dataset	ex: testLong.txt	Input dataset to be processed.
 
 Example:
@@ -81,7 +81,7 @@ Usage: wide2longDS dataset
 Description:
 	The wide2longDS function reshapes the dataset from a wide to long format. The first column is factor1 while all other columns are factor2. Data for each combination of factor1 and factor2 is displayed in separate rows.
 
-Arguments:
+Parameters:
 	dataset	ex: testWide.txt	Input dataset to be processed.
 
 Example:
@@ -95,7 +95,7 @@ Usage: sortValuesDS dataset
 Description:
 	The sortValuesDS function sorts values in a comma-delimited field from lowest to highest.
 
-Arguments:
+Parameters:
 	dataset	ex: test1.txt	Input dataset to be processed.
 
 Example:
@@ -109,7 +109,7 @@ Usage: sortReverseValuesDS dataset
 Description:
 	The sortReverseValuesDS function sorts values in a comma-delimited field from highest to lowest.
 
-Arguments:
+Parameters:
 	dataset	ex: test1.txt	Input dataset to be processed.
 
 Example:
@@ -123,7 +123,7 @@ Usage: sortUniqueValuesDS dataset
 Description:
 	The sortUniqueValuesDS function sorts values in a comma-delimited field from lowest to highest, and only displays the unique values.
 
-Arguments:
+Parameters:
 	dataset	ex: test1.txt	Input dataset to be processed.
 
 Example:
@@ -137,7 +137,7 @@ Usage: maxValuesDS dataset
 Description:
 	The maxValuesDS function displays only the highest value in a comma-delimited field.
 
-Arguments:
+Parameters:
 	dataset	ex: test1.txt	Input dataset to be processed.
 
 Example:
@@ -151,7 +151,7 @@ Usage: minValuesDS dataset
 Description:
 	The minValuesDS function displays only the lowest value in a comma-delimited field.
 
-Arguments:
+Parameters:
 	dataset	ex: test1.txt	Input dataset to be processed.
 
 Example:
@@ -165,7 +165,7 @@ Usage: minSkipZeroValuesDS dataset
 Description:
 	The minSkipZeroValuesDS function displays the lowest non-zero value in a comma-delimited field.
 
-Arguments:
+Parameters:
 	dataset	ex: test1.txt	Input dataset to be processed.
 
 Example:
@@ -179,7 +179,7 @@ Usage: maxLenDS dataset
 Description:
 	The maxLenDS function displays the string with the least characters in a comma-delimited field.
 
-Arguments:
+Parameters:
 	dataset	ex: test2.txt	Input dataset to be processed.
 
 Example:
@@ -193,7 +193,7 @@ Usage: minLenDS dataset
 Description:
 	The minLenDS function displays the string with the most characters in a comma-delimited field.
 
-Arguments:
+Parameters:
 	dataset	ex: test2.txt	Input dataset to be processed.
 
 Example:
@@ -211,7 +211,7 @@ Usage: merge dataset1 dataset2
 Description:
 	The merge function merges two datasets using the first field as the key, combining row data where matches exist.
 
-Arguments:
+Parameters:
 	dataset1	ex: merge1.txt	Input dataset to be processed.
 	dataset2	ex: merge2.txt	Input dataset to be processed.
 
@@ -226,7 +226,7 @@ Usage: subtract dataset1 dataset2
 Description:
 	The subtract function will subtract data from dataset1 matching in dataset2, and display the remaining data.
 
-Arguments:
+Parameters:
 	dataset1	ex: test1.txt	Input dataset to be processed.
 	dataset2	ex: test1sub.txt	Input dataset to be processed.
 
@@ -241,7 +241,7 @@ Usage: reorderDSfromDS dataset1 dataset2
 Description:
 	The reorderDSfromDS function reorders the column headers of input dataset1 based on the order of input dataset2.
 
-Arguments:
+Parameters:
 	dataset1	ex: test3.txt	Input dataset to be processed.
 	dataset2	ex: test3reorder.txt	Input dataset with new column header order.
 
@@ -256,7 +256,7 @@ Usage: reorderDSfromList dataset list
 Description:
 	The reorderDSfromList function reorders the column headers of the input dataset based on the order from an input list.
 
-Arguments:
+Parameters:
 	dataset	ex: test3.txt	Input dataset to be processed.
 	list	ex: test3.list	Input list.
 
@@ -265,20 +265,18 @@ Example:
 ##END_reorderDSfromList##
 
 
-
 ###BEGIN_combineSimilarColumnDS###
 Usage: combineSimilarColumnDS dataset
 
 Description:
-	The combineSimilarColumnDS function merges overlapping column headers in the input dataset so that the columns appear as one and the row data is combined.
+	The combineSimilarColumnDS function will combine columns with identical headers by merging their values into a single column per unique header and display the combined data in a comma-delimited format.
 
-Arguments:
+Parameters:
 	dataset	ex: test4.txt	Input dataset to be processed.
 
 Example:
 	combineSimilarColumnDS test4.txt
 ##END_combineSimilarColumnDS##
-
 
 
 ###BEGIN_uniqueDS###
@@ -287,7 +285,7 @@ Usage: uniqueDS dataset
 Description:
 	The uniqueDS function transforms the input dataset to comma-delimited format and displays only unique values in order from lowest to highest.
 
-Arguments:
+Parameters:
 	dataset	ex: test1.txt	Input dataset to be processed.
 
 Example:

@@ -11,7 +11,7 @@ Usage: hapmapConcatenate hapmap1 hapmap2
 Description:
 	The hapmapConcatenate function combines row data for two input hapmaps. Row data is combined only for shared sample IDs. All other columns will be dropped.
 
-Arguments:
+Parameters:
 	hapmap1	ex: test1.hapmap	Hapmap to be processed.
 	hapmap2	ex: test3.hapmap	Hapmap to be processed.
 
@@ -26,7 +26,7 @@ Usage: hapmapMerge hapmap1 hapmap2
 Description:
 	The hapmapMerge function joins two input hapmaps in the order they are passed to the function. This function is ideal for merging a hapmap back together after splitting samples. Note: All row data existing in the right hapmap that does not exist in the left hapmap will be dropped.
 
-Arguments:
+Parameters:
 	hapmap1	ex: test1.hapmap	Hapmap to be processed.
 	hapmap2	ex: test2.hapmap	Hapmap to be processed.
 
@@ -41,7 +41,7 @@ Usage: hapmapExtract hapmap bed
 Description:
 	The hapmapExtract function will extract and display the input hapmap data matching the data in the bed file. 
 
-Arguments:
+Parameters:
 	hapmap	ex: test1.hapmap	Hapmap to be processed.
 	bed	ex: test1.bed	Data to be extracted.
 
@@ -56,7 +56,7 @@ Usage: hapmapSubtract hapmap bed
 Description:
 	The hapmapSubtract function will subtract data from the input hapmap matching data in the bed file and display the remaining data. 
 
-Arguments:
+Parameters:
 	hapmap	ex: test1.hapmap	Hapmap to be processed.
 	bed	ex: test1.bed	Data to be subtracted.
 
@@ -73,7 +73,7 @@ Usage: hapmapSNP2SV hapmap
 Description:
 	The hapmapSNP2SV function modifies the input hapmap by inserting commas to distinguish SNPs from structural variants.
 
-Arguments:
+Parameters:
 	hapmap	ex: test1.hapmap	Hapmap to be processed.
 	
 Example:
@@ -87,7 +87,7 @@ Usage: hapmapGetSNP hapmap
 Description:
 	The hapmapGetSNP function filters out structural variants from the input hapmap, resulting in a hapmap file with only SNPs remaining.
 
-Arguments:
+Parameters:
 	hapmap	ex: test1.hapmap	Hapmap to be processed.
 
 Example:
@@ -101,7 +101,7 @@ Usage: hapmapGetSV hapmap
 Description:
 	The hapmapGetSV function filters out SNPs from the input hapmap, resulting in a hapmap file with only structural variants remaining.
 
-Arguments:
+Parameters:
 	hapmap	ex: test1.hapmap	Hapmap to be processed.
 
 Example:
@@ -115,7 +115,7 @@ Usage: hapmapGetDiAlleles hapmap
 Description:
 	The hapmapGetDiAlleles function filters the input hapmap to display only diallelic SNPs.
 
-Arguments:
+Parameters:
 	hapmap	ex: test1.hapmap	Hapmap to be processed.
 
 Example:
@@ -131,7 +131,7 @@ Usage: hapmap2txt hapmap
 Description:
 	The hapmap2txt function combines the chromosome and position data from the input hapmap into a single column, i.e., chr_pos, and then displays the column data for all the samples. 
 
-Arguments:
+Parameters:
 	hapmap	ex: test1.hapmap	Hapmap to be processed.
 
 Example:
@@ -145,7 +145,7 @@ Usage: hapmap2stdhapmap hapmap ref
 Description:
 	The hapmap2stdhapmap function transforms an abbreviated input hapmap to a standard hapmap using a reference genome.
 
-Arguments:
+Parameters:
 	hapmap	ex: test1.hapmap	Hapmap to be processed.
 	ref	ex: ref.fa	Reference genome to be used.
 
@@ -160,7 +160,7 @@ Usage: stdhapmap2hapmap hapmap
 Description:
 	The stdhapmap2hapmap function transforms a standard input hapmap to an abbreviated hapmap.
 
-Arguments:
+Parameters:
 	stdhapmap	ex: test1.std.hapmap	Hapmap to be processed. Must be standard hapmap format.
 
 Example:
@@ -174,7 +174,7 @@ Usage: hapmap2vcf hapmap ref
 Description:
 	The hapmap2vcf function transforms an input hapmap to a vcf-like format using the reference genome to match up the reference and alternate alleles.
 
-Arguments:
+Parameters:
 	hapmap	ex: test1.hapmap	Hapmap to be processed.
 	ref	ex: ref.fa	Reference genome to be used. 
 
@@ -189,7 +189,7 @@ Usage: vcf2hapmap vcf
 Description:
 	The vcf2hapmap function transforms an input vcf to an abbreviated hapmap.
 
-Arguments:
+Parameters:
 	vcf	ex: test1.vcf	vcf to be processed.
 
 Example:
@@ -206,7 +206,7 @@ Usage: hapmapSplit hapmap
 Description:
 	The hapmapSplit function splits the input hapmap data by chromosome, saving each chromosomes data into a separate output file. The output files are stored in subdirectory, hapmapCHRs, within the current working directory.
 
-Arguments:
+Parameters:
 	hapmap	ex: test1.hapmap	Hapmap to be processed.
 
 Example:
@@ -220,7 +220,7 @@ Usage: hapmapSampleIDsfromList hapmap list
 Description:
 	The hapmapSampleIDsfromList function extracts and displays the data from the input hapmap for only the sample IDs in the list file. 
 
-Arguments:
+Parameters:
 	hapmap	ex: test1.hapmap	Hapmap to be processed. Must be hapmap format.
 	list	ex: selectedSample.list	List of sample IDs.
 
@@ -235,7 +235,7 @@ Usage: hapmapReAssignSampleIDsfromList hapmap list
 Description:
 	The hapmapReAssignSampleIDsfromList function reassigns the sample IDs of the input hapmap using the corresponding input list of new sample IDs.
 
-Arguments:
+Parameters:
 	hapmap	ex: test1.hapmap	Hapmap to be processed. 
 	list	ex: reassignSample.list	List of new sample IDs to replace the original sample IDs. Must be in two column, tab-delimited format with ALL original sample IDs first, followed by the new corresponding sample IDs.
 
@@ -252,7 +252,7 @@ Usage: hapmapCalculateMissingVariant hapmap
 Description:
 	 The hapmapCalculateMissingVariant function uses the input hapmap to calculate the percentage of missing variants at each site and displays the result in decimal format.
 
-Arguments:
+Parameters:
 	hapmap	ex: test1.hapmap	Hapmap to be processed.
 
 Example:
@@ -266,7 +266,7 @@ Usage: hapmapCalculateMissingSample hapmap
 Description:
 	The hapmapCalculateMissingSample function uses the input hapmap to calculate the percentage of missing variants for each sample and displays the result in decimal format.
 
-Arguments:
+Parameters:
 	hapmap	ex: test1.hapmap	Hapmap to be processed.
 
 Example:
@@ -280,7 +280,7 @@ Usage: hapmapCalculateMAF hapmap
 Description:
 	The hapmapCalculateMAF function calculates the minor allele frequency for each site in the input hapmap and displays a table with the corresponding allele and frequency.
 
-Arguments:
+Parameters:
 	hapmap	ex: test1.hapmap	Hapmap to be processed.
 
 Example:
@@ -294,7 +294,7 @@ Usage: hapmapFilterMissingVariant hapmap missing
 Description:
 	The hapmapFilterMissingVariant function filters the input hapmap to remove sites where the percentage of variants missing is greater than the specified threshold. 
 
-Arguments:
+Parameters:
 	hapmap	ex: test1.hapmap	Hapmap to be processed. 
 	missing	ex: 0.75	Missing percentage to be used. Must be in decimal format.
 
@@ -309,7 +309,7 @@ Usage: hapmapFilterMissingSample hapmap missing
 Description: 
 	The hapmapFilterMissingSample function filters the input hapmap to remove samples where the percentage of values missing is greater than the specified threshold. 
 	
-Arguments:
+Parameters:
 	hapmap	ex: test1.hapmap	Hapmap to be processed.
 	missing	ex: 0.75	Missing percentage to be used. Must be in decimal format.
 
@@ -324,7 +324,7 @@ Usage: hapmapFilterMAF hapmap MAF
 Description:
 	The hapmapFilterMAF function filters the input hapmap to remove variants with a minor allele frequency (MAF) below the specified threshold. 
 
-Arguments:
+Parameters:
 	hapmap	ex: test1.hapmap	Hapmap to be processed. 
 	maf	ex: 0.1	MAF percentage to be used. Must be in decimal format.
 
@@ -343,7 +343,7 @@ Usage: hapmapGetAlleles hapmap
 Description:
 	The hapmapGetAlleles function gets a list of the unique alleles for all of the sites in the input hapmap.
 
-Arguments:
+Parameters:
 	hapmap	ex: test1.hapmap	Hapmap to be processed.
 	
 Example:
@@ -357,7 +357,7 @@ Usage: hapmapAlleleFreqStats hapmap
 Description:
 	The hapmapAlleleFreqStats function calculates allele statistics from the input hapmap, displaying the alleles and their frequency, count, and sum.
 
-Arguments:
+Parameters:
 	hapmap	ex: test1.hapmap	Hapmap to be processed.
 	
 Example:
@@ -371,7 +371,7 @@ Usage: hapmapAlleleTypeFreq hapmap
 Description: 
 	The hapmapAlleleTypeFreq function displays the input hapmap alleles and their calculated frequencies for A, B, and H in decimal form. 
 	
-Arguments:
+Parameters:
 	hapmap	ex: test1.hapmap	Hapmap to be processed.
 
 Example:
@@ -389,7 +389,7 @@ Usage: hapmapGetIDs hapmap
 Description:
 	The hapmapGetIDs function displays a list of the sample IDs from the input hapmap.
 
-Arguments:
+Parameters:
 	hapmap	ex: test1.hapmap	Hapmap to be processed. 
 
 Example:
@@ -403,7 +403,7 @@ Usage: hapmapGetFreqSampleAlleles hapmap id
 Description:
 	The hapmapGetFreqSampleAlleles function displays the allele, frequency and depth for the specified sample.
 
-Arguments:
+Parameters:
 	hapmap	ex: test1.hapmap	Hapmap to be processed. 
 	id	ex: "SM001"	ID selected.
 
@@ -418,7 +418,7 @@ Usage: hapmapGetUniqueSampleAlleles hapmap id
 Description:
 	The hapmapGetUniqueSampleAlleles function displays only sites where the allele is unique for the specified sample ID. 
 
-Arguments:
+Parameters:
 	hapmap	ex: test1.hapmap	Hapmap to be processed. 
 	id	ex: "SM001"	ID selected.
 
@@ -433,7 +433,7 @@ Usage: hapmapGetROH hapmap count
 Description:
 	The hapmapGetROH function calculates the ROH for the input hapmap, displaying the ID, chromosome, starting position (pos1), ending position (pos2), length of the run, and number of variants in the region meeting the minimum count threshold set. If no minimum count threshold is set, the default = 50.
 
-Arguments:
+Parameters:
 	hapmap	ex: input.hapmap Hapmap to be processed.
 	count	ex: 50	Minimum count of variants in the region.
 
@@ -448,7 +448,7 @@ Usage: hapmapLowFreqAlleleMask hapmap freq
 Description:
 	The hapmapLowFreqAlleleMask function masks the alleles below the frequency threshold specified.
 
-Arguments:
+Parameters:
 	hapmap	ex: input.hapmap	Hapmap to be processed.
 	freq	ex: 0.05	Frequency threshold to be used. Must be in decimal format.
 
@@ -463,7 +463,7 @@ Usage: hapmapGetHomoPolymorphic hapmap
 Description: 
 	The hapmapGetHomoPolymorphic function filters out sites from the input hapmap that are not both homozygous and polymorphic.
 	
-Arguments:
+Parameters:
 	hapmap	ex: test1.hapmap	Hapmap to be processed.
 
 Example: 
@@ -477,7 +477,7 @@ Usage: hapmapGetConsensusCall hapmap min max
 Description: 
 	The hapmapGetConsensusCall function assigns consensus alleles at each site where the allele frequency falls within the specified threshold range. If a range is not specified the default min = 0.1 and max = 0.9.
 	
-Arguments:
+Parameters:
 	hapmap	ex: test1.hapmap	Hapmap to be processed.
 	min	ex: 0.4	Minimum frequency threshold.
 	max	ex: 0.7 Maximum frequency threshold.

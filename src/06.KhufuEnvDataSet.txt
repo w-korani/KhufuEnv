@@ -1,6 +1,6 @@
 
 ##############################
-### data set processing
+### dataset processing
 ##############################
 dimDS ds > txt [stdout]
 getIDsDS ds > txt [stdout]

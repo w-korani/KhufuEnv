@@ -11,7 +11,7 @@ Usage: avg infile index
 Description:
 	The avg function processes the input dataset by grouping its data based on the specified index and calculating the average of numerical columns within each group. The dataset must include unique non-numeric headers for each column.
 
-Arguments:
+Parameters:
 	infile	ex: test1.stat	Input file to be processed.
 	index	ex: 1	Column for grouping.                    
 
@@ -26,7 +26,7 @@ Usage: std infile index
 Description:
 	The std function processes the input dataset by grouping its data based on the specified index and calculating the standard deviation of numerical columns within each group. The dataset must include unique non-numeric headers for each column.
 
-Arguments:
+Parameters:
 	infile	ex: test2.stat	Input file to be processed.
 	index	ex: 1	Column for grouping.                   
 
@@ -41,7 +41,7 @@ Usage: sum infile index
 Description:
 	The sum function processes the input dataset by grouping its data based on the specified index and calculating the sum of numerical columns within each group. The dataset must include unique non-numeric headers for each column.
 
-Arguments:
+Parameters:
 	infile	ex: test1.stat	Input file to be processed.
 	index	ex: 1	Column for grouping.                   
 
@@ -56,7 +56,7 @@ Usage: min infile index
 Description:
 	The min function processes the input dataset by grouping its data based on the specified index and calculating the minimum value of numerical columns within each group. The dataset must include unique non-numeric headers for each column.
 
-Arguments:
+Parameters:
 	infile	ex: test1.stat	Input file to be processed.
 	index	ex: 1	Column for grouping.                 
 
@@ -71,7 +71,7 @@ Usage: max infile index
 Description:
 	The max function processes the input dataset by grouping its data based on the specified index and calculating the maximum value of numerical columns within each group. The dataset must include unique non-numeric headers for each column.
 
-Arguments:
+Parameters:
 	infile	ex: test1.stat	Input file to be processed.
 	index	ex: 1	Column for grouping.                 
 
@@ -86,7 +86,7 @@ Usage: med infile index
 Description:
 	The med function processes the input dataset by grouping its data based on the specified index and calculating the median value of numerical columns within each group. The dataset must include unique non-numeric headers for each column. 
 
-Arguments:
+Parameters:
 	infile	ex: test1.stat	Input file to be processed.
 	index	ex: 1	Column for grouping.                 
 
@@ -105,7 +105,7 @@ Usage: avgCol dataset
 Description:
 	The avgCol function calculates the mean of the numerical values in each column. Missing values will be excluded. Non-numeric text must be removed first.
 
-Arguments:
+Parameters:
 	dataset	ex: test3.stat	Dataset to be processed.
 
 Example:
@@ -119,7 +119,7 @@ Usage: stdCol dataset
 Description:
 	The stdCol function calculates the standard deviation of the numerical values in each column. Missing values will be excluded. Non-numeric text must be removed first.
 
-Arguments:
+Parameters:
 	dataset	ex: test3.stat	Dataset to be processed.
 
 Example:
@@ -133,7 +133,7 @@ Usage: sumCol dataset
 Description:
 	The sumCol function calculates the sum of the numerical values in each column. Missing values will be excluded. Non-numeric text must be removed first.
 
-Arguments:
+Parameters:
 	dataset	ex: test3.stat	Dataset to be processed.                 
 
 Example:
@@ -147,7 +147,7 @@ Usage: minCol dataset
 Description:
 	The minCol function calculates the minimum numerical value of each column. Missing values will be excluded. Non-numeric text must be removed first.
 
-Arguments:
+Parameters:
 	dataset	ex: test3.stat	Dataset to be processed.
 
 Example:
@@ -161,7 +161,7 @@ Usage: maxCol dataset
 Description:
 	The maxCol function calculates the maximum numerical value of each column. Missing values will be excluded. Non-numeric text must be removed first.
 
-Arguments:
+Parameters:
 	dataset	ex: test3.stat	Dataset to be processed.
 
 Example:
@@ -175,7 +175,7 @@ Usage: medCol dataset
 Description:
 	The medCol function calculates the median value of each column. Missing values will be excluded. Non-numeric text must be removed first.
 
-Arguments:
+Parameters:
 	dataset	ex: test3.stat	Dataset to be processed.
 
 Example:
@@ -193,7 +193,7 @@ Usage: avgRow dataset
 Description:
 	The avgRow function calculates the mean of the numerical values in each row. Missing values will be excluded. Non-numeric text must be removed first.
 
-Arguments:
+Parameters:
 	dataset	ex: test3.stat	Dataset to be processed.
 
 Example:
@@ -207,7 +207,7 @@ Usage: stdRow dataset
 Description:
 	The stdRow function calculates the standard deviation of the numerical values in each row. Missing values will be excluded. Non-numeric text must be removed first.
 
-Arguments:
+Parameters:
 	dataset	ex: test3.stat	Dataset to be processed.                   
 
 Example:
@@ -221,7 +221,7 @@ Usage: sumRow dataset
 Description:
 	The sumRow function calculates the sum of the numerical values in each row. Missing values will be excluded. Non-numeric text must be removed first.
 
-Arguments:
+Parameters:
 	dataset	ex: test3.stat	Dataset to be processed.                 
 
 Example:
@@ -235,7 +235,7 @@ Usage: minRow dataset
 Description:
 	The minRow function calculates the minimum numerical value of each row. Missing values will be excluded. Non-numeric text must be removed first.
 
-Arguments:
+Parameters:
 	dataset	ex: test3.stat	Dataset to be processed.
 
 Example:
@@ -249,7 +249,7 @@ Usage: maxRow dataset
 Description:
 	The maxRow function calculates the maximum numerical value of each row. Missing values will be excluded. Non-numeric text must be removed first.
 
-Arguments:
+Parameters:
 	dataset	ex: test3.stat	Dataset to be processed.                 
 
 Example:
@@ -263,7 +263,7 @@ Usage: medRow dataset
 Description:
 	The medRow function calculates the median value of each row. Missing values will be excluded. Non-numeric text must be removed first.
 
-Arguments:
+Parameters:
 	dataset	ex: test3.stat	Dataset to be processed.                 
 
 Example:

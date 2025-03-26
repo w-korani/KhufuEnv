@@ -12,7 +12,7 @@ Usage: fastq2txt fastq
 Description:
 	The fastq2txt function reformats the input fastq to a text format. The four lines of data for each read appear in one line, tab-delimited.  
 
-Arguments:
+Parameters:
 	fastq	ex: test1.r1.fq	Input fastq to be processed.              
 
 Example:
@@ -26,7 +26,7 @@ Usage: txt2fastq txt_fastq
 Description:
 	The txt2fastq function reformats the input text fastq so that the data for each read appears on four separate lines instead of a single line.
 
-Arguments:
+Parameters:
 	fastq	ex: test1.r1.fq.txt	Input text fastq to be processed.         
 
 Example:
@@ -40,7 +40,7 @@ Usage: fastq2fasta fastq
 Description:
 	The fastq2fasta function reformats the input fastq to display the data in a fasta format where the first line begins with the ">" symbol, followed by the header information. The second line contains the sequence. The third and fourth lines from the input fastq are dropped.
 
-Arguments:
+Parameters:
 	fastq	ex: test1.r1.fq	Input fastq to be processed.                    
 
 Example:
@@ -54,7 +54,7 @@ Usage: fasta2fastq fasta
 Description:
 	The fasta2fastq function reformats the input fasta to display the data in a fastq format where the first line contains the header information, the second line contains the sequence, the third line contains the "+" separator and the fourth line contains a sequence of "~" in place of quality scores.
 
-Arguments:
+Parameters:
 	fasta	ex: test1.r1.fq.fasta	Input fasta to be processed.                    
 
 Example:
@@ -68,7 +68,7 @@ Usage: fastqLen fastq
 Description:
 	The fastqLen function calculates the sequence length for each read.
 
-Arguments:
+Parameters:
 	fastq	ex: test1.r1.fq	Input fastq to be processed.                  
 
 Example:
@@ -82,7 +82,7 @@ Usage: fastqAllLen fastq
 Description:
 	The fastqAllLen function calculates the total sequence length for all reads.
 
-Arguments:
+Parameters:
 	fastq	ex: test1.r1.fq	Input fastq to be processed.                  
 
 Example:
@@ -96,7 +96,7 @@ Usage: fastqFilterLen fastq len
 Description:
 	The fastqFilterLen function filters out sequences below the specified minimum length.
 
-Arguments:
+Parameters:
 	fastq	ex: test1.r1.fq	Input fastq to be processed.                  
 	length	ex: 131
 
@@ -111,7 +111,7 @@ Usage: fastq2kmer fastq width move
 Description:
 	The fastq2kmer function splits the sequences into kmers of the specified window width and step size.
 
-Arguments:
+Parameters:
 	fastq	ex: test1.fasta	Input fastq to be processed.
 	width	ex: 80	Width of the window.
 	move	ex: 40	Step size.                 
@@ -127,7 +127,7 @@ Usage: fastqSubSampling fastq1 fastq2 length
 Description:
 	The fastqSubSampling function gets a subsampling of sequences from the input fastq pair whose total length does not exceed the specified threshold.
 
-Arguments:
+Parameters:
 	fastq1	ex: test1.r1.fq	Input fastq to be processed.                   
 	fastq2	ex: test1.r2.fq	Input fastq to be processed.
 	length	500	Length threshold. 
@@ -143,7 +143,7 @@ Usage: fastqAverage fastq
 Description:
 	The fastqAverage function calculates the average sequence length for all reads.
 
-Arguments:
+Parameters:
 	fastq	ex: test1.r1.fq	Input fastq to be processed.                  
 
 Example:
@@ -157,7 +157,7 @@ Usage: fastqStd fastq
 Description:
 	The fastqStd function calculates the standard deviation of the sequence length for all reads.
 
-Arguments:
+Parameters:
 	fastq	ex: test1.r1.fq	Input fastq to be processed.                  
 
 Example:
@@ -171,7 +171,7 @@ Usage: fastqStat fastq
 Description:
 	The fastqStat function calculates and displays a tab-delimited table consisting of the header ID, quality score averages and quality score standard deviations for the input fastq. 
 
-Arguments:
+Parameters:
 	fastq	ex: test1.r1.fq	Input fastq to be processed.                  
 
 Example:
@@ -185,7 +185,7 @@ Usage: phred33
 Description:
 	The phred33 function displays Phred+33 quality scores for reference.
 
-Arguments:
+Parameters:
 
 Example:
 	phred33
@@ -198,7 +198,7 @@ Usage: phred64
 Description:
 	The phred64 function displays Phred+64 quality scores for reference.
 
-Arguments:
+Parameters:
 
 Example:
 	phred64

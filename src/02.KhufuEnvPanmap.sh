@@ -304,7 +304,7 @@ cat $1 > "$tmpDir0208"/panmap
 panmapCalculateMissingSample "$tmpDir0208"/panmap | awk -v Smiss=$Smiss '{if($2<=Smiss){print $1}}'  > "$tmpDir0208"/Smiss"$Smiss"
 cat "$tmpDir0208"/panmap | head -1 | cut -f 1-4 | tr '\t' '\n' | cat - <(cat "$tmpDir0208"/Smiss"$Smiss") > "$tmpDir0208"/Smiss"$Smiss".2
 reorderDSfromList  "$tmpDir0208"/panmap "$tmpDir0208"/Smiss"$Smiss".2  > "$id".Smiss"$Smiss".panmap
-cat $1".fa" > "$id"Smiss"$Smiss".panmap.fa 
+cat "$1".fa > "$id".Smiss"$Smiss".panmap.fa 
 echo ""$id".Smiss"$Smiss".panmap & "$id".Smiss"$Smiss".panmap.fa were generated"
 rm -rf "$tmpDir0208"
 trap "rm -rf $tmpDir0208" EXIT

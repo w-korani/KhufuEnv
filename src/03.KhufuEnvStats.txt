@@ -1,6 +1,6 @@
 
 ##############################
-### general stats
+### stats
 ##############################
 avg infile index > txt [stdout]
 std infile index > txt [stdout]
