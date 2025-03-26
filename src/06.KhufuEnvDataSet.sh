@@ -115,6 +115,20 @@ AB = plyr::join(A,B,by="V1")
 write.table(AB,"",col.names=FALSE,row.names=FALSE,sep="\t",quote=FALSE)' $1 $2 ;
 }
 ############################
+extract(){
+tmpDir0601=$(mktemp -d "./KhufuEnviron.XXXXXXXXX")
+cat $1 > "$tmpDir0601"/A
+cat $2 > "$tmpDir0601"/B
+Rscript -e 'args = commandArgs(trailingOnly=TRUE)
+A = as.data.frame(data.table::fread(args[1],header=FALSE))
+B = as.data.frame(data.table::fread(args[2],header=FALSE))
+if(ncol(B)==1){B=cbind.data.frame(B,"B")}
+AB = plyr::join(A,B,by="V1")
+write.table(AB,"",col.names=FALSE,row.names=FALSE,sep="\t",quote=FALSE)' "$tmpDir0601"/A "$tmpDir0601"/B |  grep -v "NA$" | awk -v Bcol=$(cat "$tmpDir0601"/B | head -1 | wc -w) '{if(Bcol==1) {NF--} }'1 | tr ' ' '\t'
+rm -rf $tmpDir0201
+trap "rm -rf $tmpDir0601" EXIT
+}
+############################
 subtract (){
 tmpDir0601=$(mktemp -d "./KhufuEnviron.XXXXXXXXX")
 cat $1 > "$tmpDir0601"/A
