@@ -15,6 +15,7 @@ Every tool in KhufuEnv should meet the following criteria
 
 ## Requirements
 R package (basic, in addition to data.table, tidyr & plyr packages)
+gawk should be installed if not available
 
 ## Installation
 
