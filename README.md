@@ -14,7 +14,7 @@ Every tool in KhufuEnv should meet the following criteria
 - does not need special dependencies or other third-party computational tools
 
 ## Requirements
-R package (basic, in addition to data.table & plyr packages)
+R package (basic, in addition to data.table, tidyr & plyr packages)
 
 ## Installation
 
