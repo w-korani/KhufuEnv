@@ -220,6 +220,21 @@ Example:
 ##END_merge##
 
 
+###BEGIN_extract###
+Usage: extract dataset1 dataset2
+
+Description:
+	The extract function will extract and display the data from the first input dataset matching the data in the second input dataset.
+
+Arguments:
+	dataset1	ex: test1.txt	Input dataset to be processed.
+	dataset2	ex: test1sub.txt	Input dataset to be processed.
+
+Example:
+	extract test1.txt test1sub.txt
+##END_extract##
+
+
 ###BEGIN_subtract###
 Usage: subtract dataset1 dataset2
 

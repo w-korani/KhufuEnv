@@ -18,6 +18,7 @@ maxLenDS ds > ds [stdout]
 minLenDS ds > ds [stdout]
 #############
 merge ds1 ds2 > ds [stdout]
+extract ds1 ds2 > ds [stdout]
 subtract ds1 ds2 > ds [stdout]
 reorderDSfromDS ds1 ds2 > ds [stdout]
 reorderDSfromList ds list > ds [stdout]

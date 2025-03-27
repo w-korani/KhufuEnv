@@ -74,10 +74,10 @@ Description:
 	The hapmapSNP2SV function modifies the input hapmap by inserting commas to distinguish SNPs from structural variants.
 
 Parameters:
-	hapmap	ex: test1.hapmap	Hapmap to be processed.
+	hapmap	ex: test.hapmap	Hapmap to be processed.
 	
 Example:
-	hapmapSNP2SV test1.hapmap
+	hapmapSNP2SV test.hapmap
 ##END_hapmapSNP2SV##
 
 
@@ -147,15 +147,15 @@ Description:
 
 Parameters:
 	hapmap	ex: test1.hapmap	Hapmap to be processed.
-	ref	ex: ref.fa	Reference genome to be used.
+	ref	ex: ref1.txt	Reference genome to be used.
 
 Example:
-	hapmap2stdhapmap test1.hapmap ref.fa
+	hapmap2stdhapmap test1.hapmap ref1.txt
 ##END_hapmap2stdhapmap##
 
 
 ###BEGIN_stdhapmap2hapmap###
-Usage: stdhapmap2hapmap hapmap
+Usage: stdhapmap2hapmap stdhapmap
 
 Description:
 	The stdhapmap2hapmap function transforms a standard input hapmap to an abbreviated hapmap.
@@ -176,10 +176,10 @@ Description:
 
 Parameters:
 	hapmap	ex: test1.hapmap	Hapmap to be processed.
-	ref	ex: ref.fa	Reference genome to be used. 
+	ref	ex: ref1.txt	Reference genome to be used. 
 
 Example:
-	hapmap2vcf test1.hapmap ref.fa
+	hapmap2vcf test1.hapmap ref1.txt
 ##END_hapmap2vcf##
 
 
@@ -475,7 +475,7 @@ Example:
 Usage: hapmapGetConsensusCall hapmap min max
 
 Description: 
-	The hapmapGetConsensusCall function assigns consensus alleles at each site where the allele frequency falls within the specified threshold range. If a range is not specified the default min = 0.1 and max = 0.9.
+	The hapmapGetConsensusCall function assigns consensus alleles at each site where the allele frequency falls within the specified threshold range. If a range is not specified the default min = 0.1 and max = 0.9. If no consensus is called, it will be represented with a "-".
 	
 Parameters:
 	hapmap	ex: test1.hapmap	Hapmap to be processed.

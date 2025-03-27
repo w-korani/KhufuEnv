@@ -60,7 +60,7 @@ maxValuesDS(){
 }
 ############################
 minValuesDS(){
-   cat $1 | SortReverseValuesDS | awk '
+   cat $1 | sortReverseValuesDS | awk '
       function min (str){nA=split(str,A,","); S=A[nA] ; return S }
       { 
          S=""; for(i=1;i<=NF;++i){S=S";"min($i)}; S=substr(S,2); print S 
@@ -68,7 +68,7 @@ minValuesDS(){
 }
 ############################
 minSkipZeroValuesDS(){
-   cat $1 | SortReverseValuesDS | awk '
+   cat $1 | sortReverseValuesDS | awk '
       function min (str){nA=split(str,A,","); S=A[1] ; for(a=2;a<=nA;++a){ if(A[a] < S && A[a] != 0 ) {S=A[a] } } ; if(S==0){S="-"} ; return S }
       { 
          S=""; for(i=1;i<=NF;++i){S=S";"min($i)}; S=substr(S,2); print S 
@@ -184,7 +184,7 @@ reorderDSfromList "$tmpDir0603"/ds.txt "$tmpDir0603"/ds.list | awk '{
    }
    S=substr(S,2); print S
 }' | tr ';' '\t'
-rm -rf $tmpDir0201
+rm -rf $tmpDir0603
 trap "rm -rf $tmpDir0603" EXIT
 }
 ############################

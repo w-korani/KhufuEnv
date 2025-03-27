@@ -80,16 +80,22 @@ fastqSubSampling(){
 fq1=$1
 fq2=$2
 len=$3
-paste <(fastq $fq1) <(fastq $fq2) | awk -v len=$len -v fq1=$(echo $fq1 | sed "s:.*/::g" ) -v fq2=$(echo $fq2 | sed "s:.*/::g" ) '{if(X<=len) { print $1 |  "gzip > sub_"fq1".gz" ; print $2 |  "gzip > sub_"fq2".gz" } else if(X>len){exit;} ; if(NR%4==0) { X+=length($1)+length($2) } } '
-echo "sub_"$fq1" & sub_"$fq2" was generated"
+if [[ $fq2 == "" ]]
+then
+   fastq $fq1 | awk -v len=$len -v fq1=$(echo $fq1 | sed "s:.*/::g" )  '{if(X<=len) { print $1 |  "gzip > sub_"fq1".gz"} else if(X>len){exit;} ; if(NR%4==0) { X+=length($1)+length($2) } } '
+   echo "sub_"$fq1".gz was generated"
+else
+   paste <(fastq $fq1) <(fastq $fq2) | awk -v len=$len -v fq1=$(echo $fq1 | sed "s:.*/::g" ) -v fq2=$(echo $fq2 | sed "s:.*/::g" ) '{if(X<=len) { print $1 |  "gzip > sub_"fq1".gz" ; print $2 |  "gzip > sub_"fq2".gz" } else if(X>len){exit;} ; if(NR%4==0) { X+=length($1)+length($2) } } '
+   echo "sub_"$fq1".gz & sub_"$fq2".gz were generated"
+fi
 }
 ############################
 fastqAverage(){
 fq=$1
 if (file $fq | grep -q compressed ) ; then
-   zcat $fq | awk '{if(NR%4==2) {print length($0)} }' | averageCol
+   zcat $fq | awk '{if(NR%4==2) {print length($0)} }' | avgCol
 else
-   cat $fq | awk '{if(NR%4==2) {print length($0)} }' | averageCol
+   cat $fq | awk '{if(NR%4==2) {print length($0)} }' | avgCol
 fi
 }
 ############################ 
