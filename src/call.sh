@@ -1,5 +1,3 @@
-source /etc/asdap/set1.sh
-
 dir="/etc/KhufuEnv"
 source ""$dir"/01.KhufuEnvHapmap.sh"
 source ""$dir"/02.KhufuEnvPanmap.sh"
