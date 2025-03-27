@@ -16,7 +16,7 @@ minValuesDS ds > ds [stdout]
 minSkipZeroValuesDS ds > ds [stdout]
 maxLenDS ds > ds [stdout]
 minLenDS ds > ds [stdout]
-#############
+##############################
 merge ds1 ds2 > ds [stdout]
 extract ds1 ds2 > ds [stdout]
 subtract ds1 ds2 > ds [stdout]

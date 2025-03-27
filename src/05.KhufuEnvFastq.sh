@@ -64,7 +64,7 @@ fi
 }
 ############################
 fasta2fastq(){
-   fasta2fa $1 | awk '{if(NR%2==0) {seq=$0; Q=$0; gsub(".","~",Q); print id;print seq; print "+"; print Q } else {id=$0;gsub(">","@",id)} }'
+   fastaUnWrap $1 | awk '{if(NR%2==0) {seq=$0; Q=$0; gsub(".","~",Q); print id;print seq; print "+"; print Q } else {id=$0;gsub(">","@",id)} }'
 }
 ############################
 fastq2kmer(){

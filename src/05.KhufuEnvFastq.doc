@@ -125,15 +125,16 @@ Example:
 Usage: fastqSubSampling fastq1 fastq2 length
 
 Description:
-	The fastqSubSampling function gets a subsampling of sequences from the input fastq pair whose total length does not exceed the specified threshold.
+	The fastqSubSampling function gets a subsampling of sequences from the input fastq pair whose total length does not exceed the specified threshold. This function can also be used for single-end reads by replacing the second argument with "" instead of the fastq2 file.
 
 Parameters:
-	fastq1	ex: test1.r1.fq	Input fastq to be processed.                   
-	fastq2	ex: test1.r2.fq	Input fastq to be processed.
+	fastq1	ex: test1.r1.fq	Input read 1 fastq to be processed.                   
+	fastq2	ex: test1.r2.fq	Input read 2 fastq to be processed. Note: For single-end reads, use "" for this parameter. 
 	length	500	Length threshold. 
 
 Example:
 	fastqSubSampling test1.r1.fq test1.r2.fq 500	Saves output to test1.r1.fq.gz & test1.r2.fq.gz
+	fastqSubSampling test1.fq "" 500        Saves output to test1.fq.gz for single-end reads.
 ##END_fastqSubSampling##
 
 

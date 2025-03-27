@@ -88,10 +88,10 @@ Description:
 	The hapmapGetSNP function filters out structural variants from the input hapmap, resulting in a hapmap file with only SNPs remaining.
 
 Parameters:
-	hapmap	ex: test1.hapmap	Hapmap to be processed.
+	hapmap	ex: test4.hapmap	Hapmap to be processed.
 
 Example:
-	hapmapGetSNP test1.hapmap
+	hapmapGetSNP test4.hapmap
 ##END_hapmapGetSNP##
 
 
@@ -102,10 +102,10 @@ Description:
 	The hapmapGetSV function filters out SNPs from the input hapmap, resulting in a hapmap file with only structural variants remaining.
 
 Parameters:
-	hapmap	ex: test1.hapmap	Hapmap to be processed.
+	hapmap	ex: test4.hapmap	Hapmap to be processed.
 
 Example:
-	hapmapGetSV test1.hapmap
+	hapmapGetSV test4.hapmap
 ##END_hapmapGetSV##
 
 
@@ -420,10 +420,10 @@ Description:
 
 Parameters:
 	hapmap	ex: test1.hapmap	Hapmap to be processed. 
-	id	ex: "SM001"	ID selected.
+	id	ex: "SM005"	ID selected.
 
 Example:
-	hapmapGetUniqueSampleAlleles test1.hapmap "SM001"
+	hapmapGetUniqueSampleAlleles test1.hapmap "SM005"
 ##END_hapmapGetUniqueSampleAlleles##
 
 
