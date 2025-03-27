@@ -12,6 +12,6 @@ cp -RP $CDIR/src/* /etc/KhufuEnv/
 chmod 555 /etc/KhufuEnv/*.sh
 
 ## C++ compiling
-g++ "/etc/KhufuEnv/utilities/phred_score_stat.cpp -o /etc/KhufuEnv/utilities/phred_score_stat
+g++ /etc/KhufuEnv/utilities/phred_score_stat.cpp -o /etc/KhufuEnv/utilities/phred_score_stat
 
 echo "Successfully installed"
