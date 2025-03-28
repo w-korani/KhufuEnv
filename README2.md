@@ -10,7 +10,7 @@ Every tool in KhufuEnv is designed to meet the following criteria:
 - Single-thread process.
 - Does not require significant computational resources.
 - Does a simple job. 
-- To be run using bash script.
+- Bash-compatible.
 - Does not require special dependencies or other third-party computational tools.
 
 <!-- You may use this if you like? :)
