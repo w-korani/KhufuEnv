@@ -155,7 +155,8 @@ TRv2Chr.03  106731401  -      A      -      A      -      -      -      -      A
 
 
 ## Citation
-bioxiv
+Wright, Hallie C, Catherine E. M. Davis, Josh Clevenger, and Walid Korani. “KhufuEnv, an Auxiliary Toolkit for Building Computational Pipelines for Plant and Animal Breeding.” bioRxiv, January 1, 2025, 2025.03.28.645917. https://doi.org/10.1101/2025.03.28.645917.
+
 
 ## Available tools
 ![Image](https://github.com/user-attachments/assets/a52acdee-73b0-4a68-87ee-69dc2a1b65c9)
