@@ -401,7 +401,7 @@ Example:
 Usage: hapmapGetFreqSampleAlleles hapmap id
 
 Description:
-	The hapmapGetFreqSampleAlleles function displays the allele, frequency and depth for the specified sample.
+	The hapmapGetFreqSampleAlleles function displays the allele, frequency and depth for each site in the input hapmap, using the the specified sample as the reference. Note: The reference sample is NOT included in the denominator when computing allele frequency or depth. It is only used to define the "reference" allele.
 
 Parameters:
 	hapmap	ex: test1.hapmap	Hapmap to be processed. 
