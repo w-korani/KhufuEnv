@@ -51,7 +51,7 @@ Example:
 Usage: fastaWrap fasta
 
 Description:
-	The fastaWrap function reformats the input fasta by placing the header and sequence on separate lines and wrapping the sequence into fixed-length lines of the specified length. If no length is provided, the sequence is wrapped at 120 characters per line.
+	The fastaWrap function reformats the input fasta by placing the header and sequence on separate lines and wrapping the sequence into fixed-length lines of the specified length. If no length is provided, the sequence is wrapped at 120 characters per line. Note: The fastaWrap function was designed to wrap continuous lines and therefore does not remove existing line endings. However, you can use fastaUnWrap to remove existing line endings and then pipe the results to fastaWrap using the desired sequence length. Ex: fastaUnWrap input.fa | fastaWrap - 80 
 
 Parameters:
 	fasta	ex: test1.fa	Input fasta to be processed. 
