@@ -1,17 +1,18 @@
 #!/bin/sh
 
 CDIR="$(pwd)"
+mkdir -p ~/bin
 
-if test -d /etc/KhufuEnv; then rm -rf /etc/KhufuEnv; fi
+if test -d ~/bin/KhufuEnv; then rm -rf ~/bin/KhufuEnv; fi
 
 echo "copying over files"
-mkdir -p /etc/KhufuEnv/
-cp -RP $CDIR/src/* /etc/KhufuEnv/
+mkdir -p ~/bin/KhufuEnv/
+cp -RP $CDIR/src/* ~/bin/KhufuEnv/
 
 # perms
-chmod 555 /etc/KhufuEnv/*.sh
+chmod 555 ~/bin/KhufuEnv/*.sh
 
 ## C++ compiling
-g++ /etc/KhufuEnv/utilities/phred_score_stat.cpp -o /etc/KhufuEnv/utilities/phred_score_stat
+g++ ~/bin/KhufuEnv/utilities/phred_score_stat.cpp -o ~/bin/KhufuEnv/utilities/phred_score_stat
 
 echo "Successfully installed"
