@@ -44,7 +44,7 @@ Every tool in KhufuEnv is designed to meet the following criteria:
    ```
 2. Go to the package folder.
    ```
-   cd KhufuEnv_main
+   cd KhufuEnv
    ```
 3. Run the installer.
    ```
@@ -63,7 +63,7 @@ Every tool in KhufuEnv is designed to meet the following criteria:
 ## Uninstallation
 1. Go to the package folder.
    ```
-   cd KhufuEnv_main
+   cd KhufuEnv
    ```
 2. Run the uninstaller.
    ```
@@ -98,7 +98,7 @@ In order to help users test the functionality of these tools, a directory contai
 ### How to Test a Tool
 - Navigate to the main test directory.
 ```
-cd KhufuEnv_main/TestingData
+cd KhufuEnv/TestingData
 ```
 - Each section has their own set of test inputs. You will need to navigate to the appropriate subdirectory for the section's tools you want to test, replacing `<section-inputs>` with the name of the section's corresponding directory.
 ```
