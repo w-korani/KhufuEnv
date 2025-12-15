@@ -48,7 +48,7 @@ Every tool in KhufuEnv is designed to meet the following criteria:
    ```
 3. Run the installer.
    ```
-   sudo bash ./installer.sh
+   bash ./installer.sh
    ```
 4. Add the source for the Bash Shell Environment.
    ```
@@ -67,7 +67,7 @@ Every tool in KhufuEnv is designed to meet the following criteria:
    ```
 2. Run the uninstaller.
    ```
-   sudo bash ./uninstaller.sh
+   bash ./uninstaller.sh
    ```
 3. Remove the source for the Bash Shell Environment.
    ```
