@@ -1,4 +1,4 @@
-khufu_dir="~/bin/KhufuEnv"
+khufu_dir="$HOME/bin/KhufuEnv"
 source ""$khufu_dir"/01.KhufuEnvHapmap.sh"
 source ""$khufu_dir"/02.KhufuEnvPanmap.sh"
 source ""$khufu_dir"/03.KhufuEnvStats.sh"
