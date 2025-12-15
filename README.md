@@ -52,7 +52,7 @@ Every tool in KhufuEnv is designed to meet the following criteria:
    ```
 4. Add the source for the Bash Shell Environment.
    ```
-   echo "source /etc/KhufuEnv/call.sh"  >>  ~/.bashrc
+   echo "source ~/bin/KhufuEnv/call.sh"  >>  ~/.bashrc
    ```
 5. Refresh the Bash Shell Environment.
    ```
@@ -71,7 +71,7 @@ Every tool in KhufuEnv is designed to meet the following criteria:
    ```
 3. Remove the source for the Bash Shell Environment.
    ```
-   sed -i "/^source \/etc\/KhufuEnv\/call.sh$/d"  ~/.bashrc
+   sed -i "/^source ~\/bin\/KhufuEnv\/call.sh$/d"  ~/.bashrc
    ```
 4. Refresh the Bash Shell Environment.
    ```
